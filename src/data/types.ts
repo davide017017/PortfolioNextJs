@@ -1,6 +1,6 @@
-import { StaticImageData } from 'next/image';
-import { ForwardRefExoticComponent, SVGProps, RefAttributes } from 'react';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
+import {StaticImageData} from 'next/image';
+import {ForwardRefExoticComponent, RefAttributes,SVGProps} from 'react';
 
 export interface HomepageMeta {
   title: string;
@@ -46,7 +46,7 @@ export interface AboutItem {
  * Skills section
  */
 export interface Skills {
-  id?: string; 
+  id?: string;
   name: string;
   icon: JSX.Element;
   alt: string;
@@ -92,7 +92,12 @@ export const ContactType = {
 } as const;
 
 export type ContactType = (typeof ContactType)[keyof typeof ContactType];
-export type IconComponent = ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, "ref"> & { title?: string | undefined; titleId?: string | undefined; } & RefAttributes<SVGSVGElement>>;
+export type IconComponent = ForwardRefExoticComponent<
+  Omit<SVGProps<SVGSVGElement>, 'ref'> & {
+    title?: string | undefined;
+    titleId?: string | undefined;
+  } & RefAttributes<SVGSVGElement>
+>;
 
 export interface ContactItem {
   text: string;

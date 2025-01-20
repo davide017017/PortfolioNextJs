@@ -1,15 +1,15 @@
+import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import {
-  EnvelopeIcon,
-  PhoneIcon,
-  MapPinIcon,
-  GlobeAltIcon,
-  CodeBracketSquareIcon,
   AcademicCapIcon,
-  SparklesIcon,
-  CakeIcon,
   ArrowDownTrayIcon,
+  CakeIcon,
+  CodeBracketSquareIcon,
+  EnvelopeIcon,
+  GlobeAltIcon,
+  MapPinIcon,
+  PhoneIcon,
+  SparklesIcon,
 } from '@heroicons/react/24/outline';
-import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
@@ -18,21 +18,15 @@ import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 import profilepic from '../images/profilepic.jpg';
-
-import {
-  About,
-  Hero,
-  HomepageMeta,
-  PortfolioItem,
-  Social,
-} from './types';
+import {About, Hero, HomepageMeta, PortfolioItem, Social} from './types';
 
 /**
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
   title: 'Davide Martinico | Aspirante Sviluppatore Full-Stack',
-  description: "Portfolio di Davide Martinico, studente di sviluppo full-stack. Esploro le tecnologie web più moderne, tra cui React, Next.js, TypeScript e Tailwind CSS, per creare applicazioni innovative.",
+  description:
+    'Portfolio di Davide Martinico, studente di sviluppo full-stack. Esploro le tecnologie web più moderne, tra cui React, Next.js, TypeScript e Tailwind CSS, per creare applicazioni innovative.',
 };
 
 /**
@@ -63,7 +57,8 @@ export const heroData: Hero = {
         team working e orientamento al risultato.
       </p>
       <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg font-mono">
-        Nel tempo libero mi dedico all'informatica, al giardinaggio, alla lettura di manga, ai viaggi, alla musica (suono la batteria) e alla cucina.
+        Nel tempo libero mi dedico all'informatica, al giardinaggio, alla lettura di manga, ai viaggi, alla musica
+        (suono la batteria) e alla cucina.
       </p>
     </>
   ),
@@ -89,18 +84,26 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `Appassionato di tecnologia e con una mentalità orientata alla soluzione, affronto le sfide dello sviluppo web con entusiasmo e precisione. Il mio background in gestione e coordinamento mi fornisce una solida base per lavorare in team e raggiungere obiettivi concreti. Sono determinato a crescere come sviluppatore full-stack, mettendo a disposizione le mie competenze in React, Next.js, TypeScript e Tailwind CSS per creare applicazioni web performanti e user-friendly.`,
   aboutItems: [
-    {label: 'Città', text: 'Genova - IT', Icon: MapPinIcon }, 
-    {label: 'Formazione', text: 'Corso Full Stack Web Developer presso Musa Formazione', Icon: AcademicCapIcon },
-    {label: 'Studi', text:'Diploma - Tecnico dei Sistemi Energetici',Icon: AcademicCapIcon },
-    {label: 'Skills', text: 'HTML, CSS, JavaScript, React, Next.js, TypeScript, Node.js,  Tailwind, Git', Icon: CodeBracketSquareIcon },
-    {label: 'Lingue', text: 'Italiano (madrelingua), Inglese (B2)', Icon: GlobeAltIcon },
-    {label: 'Età', text: '34', Icon: CakeIcon }, 
-    {label: 'Interessi', text: 'Informatica, Giardinaggio, Manga, Viaggi, Musica (Batteria), Cucina', Icon: SparklesIcon },
+    {label: 'Città', text: 'Genova - IT', Icon: MapPinIcon},
+    {label: 'Formazione', text: 'Corso Full Stack Web Developer presso Musa Formazione', Icon: AcademicCapIcon},
+    {label: 'Studi', text: 'Diploma - Tecnico dei Sistemi Energetici', Icon: AcademicCapIcon},
+    {
+      label: 'Skills',
+      text: 'HTML, CSS, JavaScript, React, Next.js, TypeScript, Node.js,  Tailwind, Git',
+      Icon: CodeBracketSquareIcon,
+    },
+    {label: 'Lingue', text: 'Italiano (madrelingua), Inglese (B2)', Icon: GlobeAltIcon},
+    {label: 'Età', text: '34', Icon: CakeIcon},
+    {
+      label: 'Interessi',
+      text: 'Informatica, Giardinaggio, Manga, Viaggi, Musica (Batteria), Cucina',
+      Icon: SparklesIcon,
+    },
   ],
 };
 
 /**
- * Portfolio section 
+ * Portfolio section
  */
 export const portfolioItems: PortfolioItem[] = [
   {
@@ -158,7 +161,6 @@ export const contactData = {
       Icon: MapPinIcon,
       srLabel: 'Posizione',
     },
-
   ],
 };
 
@@ -166,6 +168,6 @@ export const contactData = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  { label: 'GitHub', href: 'https://github.com/davide017017', icon: faGithub },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com', icon: faLinkedin },
+  {label: 'GitHub', href: 'https://github.com/davide017017', icon: faGithub},
+  {label: 'LinkedIn', href: 'https://www.linkedin.com', icon: faLinkedin},
 ];
