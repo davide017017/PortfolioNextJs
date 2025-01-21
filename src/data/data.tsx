@@ -1,4 +1,3 @@
-import React from 'react';
 import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import {
   AcademicCapIcon,
@@ -10,6 +9,7 @@ import {
   PhoneIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
+import React from 'react';
 
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';

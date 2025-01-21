@@ -12,7 +12,7 @@ export interface HomepageMeta {
  * Hero section
  */
 export interface Hero {
-  id?: string; 
+  id?: string;
   imageSrc: string;
   name: string;
   description: JSX.Element;
@@ -30,7 +30,7 @@ interface HeroActionItem {
  * About section
  */
 export interface About {
-  id?: string; 
+  id?: string;
   profileImageSrc?: string;
   description: string;
   aboutItems: AboutItem[];
@@ -57,7 +57,7 @@ export interface Skills {
  * Portfolio section
  */
 export interface PortfolioItem {
-  id?: string; 
+  id?: string;
   title: string;
   description: string;
   url: string;
