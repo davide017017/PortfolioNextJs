@@ -70,7 +70,7 @@ export interface PortfolioItem {
 export interface ContactItem {
   text: string;
   href?: string;
-  Icon: any;
+  Icon: IconComponent;
   srLabel: string;
 }
 export type IconComponent = ForwardRefExoticComponent<
