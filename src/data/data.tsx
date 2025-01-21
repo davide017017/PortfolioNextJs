@@ -1,8 +1,8 @@
+import React from 'react';
 import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
-  CakeIcon,
   CodeBracketSquareIcon,
   EnvelopeIcon,
   GlobeAltIcon,
@@ -16,7 +16,6 @@ import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import porfolioImage5 from '../images/portfolio/portfolio-5.jpg';
 import profilepic from '../images/profilepic.jpg';
 import {About, Hero, HomepageMeta, PortfolioItem, Social} from './types';
 
@@ -32,7 +31,6 @@ export const homePageMeta: HomepageMeta = {
 /**
  * Section definition
  */
-
 export const SectionId = {
   Hero: 'hero',
   About: 'about',
@@ -52,7 +50,7 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg font-mono">
-        Sviluppatore Full Stack Junior con oltre 10 anni di esperienza in GDO & Retail (gestione e coordinamento).
+        Sviluppatore Full Stack Junior, con oltre 10 anni di esperienza in GDO & Retail (gestione e coordinamento).
         Attualmente sto completando la mia formazione per entrare nel mondo IT e mettere a frutto le mie capacità di
         team working e orientamento al risultato.
       </p>
@@ -84,7 +82,6 @@ export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `Appassionato di tecnologia e con una mentalità orientata alla soluzione, affronto le sfide dello sviluppo web con entusiasmo e precisione. Il mio background in gestione e coordinamento mi fornisce una solida base per lavorare in team e raggiungere obiettivi concreti. Sono determinato a crescere come sviluppatore full-stack, mettendo a disposizione le mie competenze in React, Next.js, TypeScript e Tailwind CSS per creare applicazioni web performanti e user-friendly.`,
   aboutItems: [
-    {label: 'Città', text: 'Genova - IT', Icon: MapPinIcon},
     {label: 'Formazione', text: 'Corso Full Stack Web Developer presso Musa Formazione', Icon: AcademicCapIcon},
     {label: 'Studi', text: 'Diploma - Tecnico dei Sistemi Energetici', Icon: AcademicCapIcon},
     {
@@ -93,12 +90,12 @@ export const aboutData: About = {
       Icon: CodeBracketSquareIcon,
     },
     {label: 'Lingue', text: 'Italiano (madrelingua), Inglese (B2)', Icon: GlobeAltIcon},
-    {label: 'Età', text: '34', Icon: CakeIcon},
     {
       label: 'Interessi',
       text: 'Informatica, Giardinaggio, Manga, Viaggi, Musica (Batteria), Cucina',
       Icon: SparklesIcon,
     },
+    {label: 'Città', text: 'Genova - IT', Icon: MapPinIcon},
   ],
 };
 
@@ -130,13 +127,8 @@ export const portfolioItems: PortfolioItem[] = [
     url: 'https://reactresume.com',
     image: porfolioImage4,
   },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
-    image: porfolioImage5,
-  },
 ];
+
 /**
  * Contact section
  */

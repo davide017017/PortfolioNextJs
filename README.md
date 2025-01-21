@@ -1,0 +1,1 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f2b73822-c09e-4f35-aab8-b64d7839c357/deploy-status)](https://app.netlify.com/sites/davide-martinico-portfolio/deploys)

@@ -25,7 +25,7 @@ const Portfolio: FC = memo(() => {
               <div className="break-inside-avoid" key={`${title}-${index}`}>
                 <div
                   className={classNames(
-                    'relative h-0 pb-[100%] w-full overflow-hidden rounded-lg shadow-2xl shadow-off-white-900/60 lg:shadow-2xl',
+                    'relative h-0 pb-[100%] w-full overflow-hidden rounded-lg shadow-off-white-900/60 shadow-2xl hover:scale-105 hover:animate-pulse transition-transform',
                   )}>
                   <Image
                     alt={title}

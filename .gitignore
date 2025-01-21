@@ -7,7 +7,7 @@
 .yarn
 
 # testing
-/coverage
+/StarBackground.tsx
 
 # next.js
 /.next/

@@ -19,7 +19,7 @@ const Page: FC<PageProps> = memo(({children, title, description}) => (
       <meta content={title} property="og:title" />
       <meta content={description} property="og:description" />
       <meta content="/ogImage.JPG" property="og:image" />
-      <meta content="https://yourwebsite.com" property="og:url" /> {/* Aggiunta URL OG **************************/}
+      <meta content="https://yourwebsite.com" property="og:https://davide-martinico-portfolio.netlify.app/" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
     </Head>
     {children}

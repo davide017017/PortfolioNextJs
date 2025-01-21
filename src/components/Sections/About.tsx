@@ -10,10 +10,10 @@ const About: FC = memo(() => {
 
   return (
     <Section className="bg-forest-night-300" sectionId={SectionId.About}>
-      <div className={classNames('grid grid-cols-1 gap-y-4', profileImageSrc && 'md:grid-cols-4')}>
+      <div className={classNames('grid grid-cols-1 gap-y-4 ', profileImageSrc && 'md:grid-cols-4')}>
         {profileImageSrc && (
           <div className="col-span-1 flex justify-center md:justify-start">
-            <div className="m-2 relative h-44 w-44 overflow-hidden rounded-xl md:h-56 md:w-56">
+            <div className="m-2 relative h-44 w-44 overflow-hidden rounded-xl md:h-56 md:w-56 shadow-off-white-900/60 shadow-2xl">
               <Image
                 alt="About me image"
                 className="h-full w-full object-cover"
@@ -32,7 +32,9 @@ const About: FC = memo(() => {
           <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {aboutItems.map(({label, text, Icon}, idx) => (
               <li className="col-span-1 flex items-start gap-x-2" key={idx}>
-                {Icon && <Icon className="h-7 w-7 text-white" />}
+                <div>
+                  {Icon && <Icon className="h-8 w-8 text-white" />}
+                </div>
                 <span className="text-md font-bold text-white">{label}:</span>
                 <span className="text-sm text-gray-300">{text}</span>
               </li>
