@@ -2,42 +2,35 @@ import {Dialog, Transition} from '@headlessui/react';
 import {Bars3BottomRightIcon} from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Link from 'next/link';
-import {FC, Fragment, memo, useCallback, useEffect, useRef, useState} from 'react';
+import {FC, Fragment, memo, useEffect, useRef, useState} from 'react';
 
+// ID per l'header
 export const headerID = 'headerNav';
-
+// Sezioni di navigazione
 const navSections = ['about', 'skills', 'portfolio', 'contact'];
 
-// Utility per generare classi CSS
-const createNavClass = (...classes: string[]) =>
-  classNames(
-    '-m-1.5 p-1.5  font-bold first-letter:uppercase hover:transition-colors hover:duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500',
-    ...classes,
-  );
-const createMobileNavClass = (...classes: string[]) =>
-  classNames(
-    'p-2  first-letter:uppercase transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500',
-    ...classes,
-  );
+// Classi CSS di base (ora const dirette)
+const baseNavClass =
+  '-m-1.5 p-1.5 font-bold first-letter:uppercase hover:transition-colors hover:duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500';
+const baseMobileNavClass =
+  'p-2 first-letter:uppercase transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500';
 
 const Header: FC = memo(() => {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleOpen = useCallback(() => setIsOpen(!isOpen), [isOpen]);
   const [currentSection, setCurrentSection] = useState<string | null>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
-  const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
+  const toggleOpen = () => setIsOpen(!isOpen);
+
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     const intersectingEntry = entries.find(entry => entry.isIntersecting);
-    if (intersectingEntry) {
+    if (intersectingEntry && intersectingEntry.target.id !== currentSection) {
       setCurrentSection(intersectingEntry.target.id);
     }
-  }, []);
+  };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5,
-    });
-
+    const observer = new IntersectionObserver(handleIntersection, {threshold: 0.5});
     observerRef.current = observer;
 
     const targets = navSections.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[];
@@ -45,22 +38,26 @@ const Header: FC = memo(() => {
 
     return () => {
       targets.forEach(target => observer.unobserve(target));
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-        observerRef.current = null;
-      }
+      observer.disconnect();
     };
-  }, [handleIntersection]);
+  }, []); // Dipendenze vuote: handleIntersection non cambia mai
 
-  const handleClick = useCallback((section: string) => {
+  const handleClick = (section: string) => {
     setCurrentSection(section);
-  }, [setCurrentSection]); 
+  };
+
+  const handleMobileClick = () => {
+    if (currentSection) {
+      handleClick(currentSection);
+    }
+    toggleOpen();
+  };
 
   return (
     <>
       <MobileNav
         currentSection={currentSection}
-        handleClick={handleClick}
+        handleClick={handleMobileClick}
         isOpen={isOpen}
         navSections={navSections}
         toggleOpen={toggleOpen}
@@ -69,19 +66,22 @@ const Header: FC = memo(() => {
     </>
   );
 });
+
 const DesktopNav: FC<{navSections: string[]; handleClick: (section: string) => void; currentSection: string | null}> =
   memo(({navSections, handleClick, currentSection}) => (
     <header className="fixed top-0 z-50 hidden w-full bg-forest-night-200/50 p-4 backdrop-blur sm:block" id={headerID}>
       <nav className="flex justify-center gap-x-8">
         {navSections.map(section => (
-          <NavItem
-            activeClass={createNavClass('text-golden-brown-100 ')}
-            current={section === currentSection}
-            inactiveClass={createNavClass('text-off-white-200')}
+          <Link
+            className={classNames(
+              baseNavClass,
+              section === currentSection ? 'text-golden-brown-100' : 'text-off-white-200',
+            )}
+            href={`/#${section}`}
             key={section}
-            onClick={() => handleClick(section)}
-            section={section}
-          />
+            onClick={() => handleClick(section)}>
+            {section}
+          </Link>
         ))}
       </nav>
     </header>
@@ -124,17 +124,21 @@ const MobileNav: FC<{
           <div className="relative w-4/5 bg-dark-olive-700">
             <nav className="mt-5 flex flex-col gap-y-2 px-2">
               {navSections.map(section => (
-                <NavItem
-                  activeClass={createMobileNavClass('bg-golden-brown-200 text-off-white-200 font-bold rounded-md')}
-                  current={section === currentSection}
-                  inactiveClass={createMobileNavClass('text-off-white-500 font-medium')}
+                <Link
+                  className={classNames(
+                    baseMobileNavClass,
+                    section === currentSection && 'bg-golden-brown-200',
+                    'text-off-white-200',
+                    'font-bold',
+                    'rounded-md',
+                    section !== currentSection && 'text-off-white-500',
+                    'font-medium',
+                  )}
+                  href={`/#${section}`}
                   key={section}
-                  onClick={() => {
-                    handleClick(section);
-                    toggleOpen();
-                  }}
-                  section={section}
-                />
+                  onClick={() => handleClick(section)}>
+                  {section}
+                </Link>
               ))}
             </nav>
           </div>
@@ -142,18 +146,6 @@ const MobileNav: FC<{
       </Dialog>
     </Transition.Root>
   </>
-));
-
-const NavItem: FC<{
-  section: string;
-  current: boolean;
-  activeClass: string;
-  inactiveClass: string;
-  onClick: () => void;
-}> = memo(({section, current, activeClass, inactiveClass, onClick}) => (
-  <Link className={classNames(current ? activeClass : inactiveClass)} href={`/#${section}`} onClick={onClick}>
-    {section}
-  </Link>
 ));
 
 export default Header;

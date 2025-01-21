@@ -1,5 +1,5 @@
 import {FC, memo} from 'react';
-import {SiCss3, SiGit, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss,SiTypescript} from 'react-icons/si';
+import {SiCss3, SiGit, SiHtml5, SiJavascript, SiNextdotjs, SiReact, SiTailwindcss, SiTypescript} from 'react-icons/si';
 
 import {SectionId} from '../../data/data';
 import type {Skills} from '../../data/types';

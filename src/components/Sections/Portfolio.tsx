@@ -13,7 +13,7 @@ const Portfolio: FC = memo(() => {
   const mobile = isMobile;
 
   return (
-    <Section className="bg-dark-olive-700" sectionId={SectionId.Portfolio}>
+    <Section className="bg-forest-night-200" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
         <h2 className="self-center text-xl font-bold text-white">
           Check out some of my work (da aggiungere ancora i lavori){' '}

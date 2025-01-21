@@ -7,7 +7,7 @@ import Socials from '../Socials';
 const currentYear = new Date().getFullYear();
 
 const Footer: FC = memo(() => (
-  <footer className="relative bg-dark-olive-700 px-4 pb-6 pt-12 sm:px-8 sm:pb-8 sm:pt-14">
+  <footer className="relative bg-forest-night-300 px-4 pb-6 pt-12 sm:px-8 sm:pb-8 sm:pt-14">
     <div className="absolute inset-x-0 -top-4 flex justify-center sm:-top-6">
       <a
         className="rounded-full bg-off-white-200 p-1 ring-white ring-offset-2 ring-offset-golden-brown-50/80 focus:outline-none focus:ring-2 sm:p-2"

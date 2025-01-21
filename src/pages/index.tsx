@@ -10,7 +10,9 @@ import Portfolio from '../components/Sections/Portfolio';
 import Skills from '../components/Sections/Skills';
 import {homePageMeta} from '../data/data';
 
-const Header = dynamic(() => import('../components/Sections/Header'), {ssr: false});
+interface HeaderProps {}
+
+const Header: FC<HeaderProps> = memo(dynamic(() => import('../components/Sections/Header'), {ssr: false}));
 
 const Home: FC = memo(() => {
   const {title, description} = homePageMeta;

@@ -9,7 +9,7 @@ const About: FC = memo(() => {
   const {profileImageSrc, description, aboutItems} = aboutData;
 
   return (
-    <Section className="bg-dark-olive-700" sectionId={SectionId.About}>
+    <Section className="bg-forest-night-300" sectionId={SectionId.About}>
       <div className={classNames('grid grid-cols-1 gap-y-4', profileImageSrc && 'md:grid-cols-4')}>
         {profileImageSrc && (
           <div className="col-span-1 flex justify-center md:justify-start">
