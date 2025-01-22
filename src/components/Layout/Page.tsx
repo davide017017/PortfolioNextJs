@@ -13,8 +13,6 @@ const Page: FC<PageProps> = memo(({children, title, description}) => (
       {/* Favicon e icone */}
       <link href="/favicon.ico" rel="icon" sizes="any" />
       <link href="/icon.svg" rel="icon" type="image/svg+xml" />
-      <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
-      <link href="/site.webmanifest" rel="manifest" />
       {/* Open Graph / SEO */}
       <meta content={title} property="og:title" />
       <meta content={description} property="og:description" />

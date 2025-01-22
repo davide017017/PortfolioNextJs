@@ -22,8 +22,8 @@ const Hero: FC = memo(() => {
           sizes="100vw"
           src={imageSrc}
         />
-        <div className="z-10 max-w-screen-lg px-4 lg:px-0">
-          <div className="flex flex-col items-center gap-6 rounded-xl bg-forest-night-200/40 p-7 text-center shadow-lg backdrop-blur-sm">
+        <div className="z-10 max-w-screen-lg px-4 lg:px-2">
+          <div className="m flex flex-col items-center gap-6 rounded-xl bg-forest-night-200/40 p-7 text-center shadow-lg backdrop-blur-sm">
             <h1 className="text-4xl font-bold font-serif text-off-white-200 sm:text-5xl lg:text-7xl">{name}</h1>
             {description}
             <Socials />

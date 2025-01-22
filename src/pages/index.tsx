@@ -8,6 +8,8 @@ import Footer from '../components/Sections/Footer';
 import Hero from '../components/Sections/Hero';
 import Portfolio from '../components/Sections/Portfolio';
 import Skills from '../components/Sections/Skills';
+import SoftSkills from './../components/Sections/SoftSkill';
+
 import {homePageMeta} from '../data/data';
 
 interface HeaderProps {}
@@ -23,6 +25,7 @@ const Home: FC = memo(() => {
       <Hero />
       <About />
       <Skills />
+      <SoftSkills />
       <Portfolio />
       <Contact />
       <Footer />

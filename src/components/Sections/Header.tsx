@@ -7,7 +7,7 @@ import {FC, Fragment, memo, useEffect, useRef, useState} from 'react';
 // ID per l'header
 export const headerID = 'headerNav';
 // Sezioni di navigazione
-const navSections = ['about', 'skills', 'portfolio', 'contact'];
+const navSections = ['about', 'skills','softskills', 'portfolio', 'contact', ];
 
 // Classi CSS di base
 const baseNavClass =
@@ -69,8 +69,8 @@ const Header: FC = memo(() => {
 
 const DesktopNav: FC<{navSections: string[]; handleClick: (section: string) => void; currentSection: string | null}> =
   memo(({navSections, handleClick, currentSection}) => (
-    <header className=" fixed top-0 z-50 hidden w-full bg-forest-night-200/60 p-4 backdrop-blur sm:block" id={headerID}>
-      <nav className="flex justify-center gap-x-8">
+    <header className=" fixed top-0 z-50 hidden w-full bg-forest-night-200/60 p-3 backdrop-blur sm:block" id={headerID}>
+      <nav className="flex justify-center gap-x-10">
         {navSections.map(section => (
           <Link
             className={classNames(

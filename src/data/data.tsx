@@ -12,7 +12,7 @@ import {
 import React from 'react';
 
 import heroImage from '../images/header-background.webp';
-import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
+import perdiana from '../images/portfolio/PerdianaReview.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
@@ -37,6 +37,7 @@ export const SectionId = {
   Contact: 'contact',
   Portfolio: 'portfolio',
   Skills: 'skills',
+  SoftSkills: 'softskills',
 } as const;
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
@@ -104,10 +105,10 @@ export const aboutData: About = {
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: '',
-    image: porfolioImage1,
+    title: 'Perdiana Accomodation (B&B Site)',
+    description: 'Piccolo sito in Html Css e Javascript',
+    url: 'https://davide017017.github.io/PerdianaSite/',
+    image: perdiana,
   },
   {
     title: 'Project title 2',

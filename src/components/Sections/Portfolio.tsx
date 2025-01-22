@@ -18,14 +18,14 @@ const Portfolio: FC = memo(() => {
         <h2 className="self-center text-xl font-bold  text-white">
           Check out some of my work (da aggiungere ancora i lavori){' '}
         </h2>
-        <div className="w-full columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
+        <div className="w-full columns-1 sm:columns-2  lg:columns-4 gap-4 align-middle">
           {portfolioItems.map((item, index) => {
             const {title, image} = item;
             return (
               <div className="break-inside-avoid p-6 md:p-3 " key={`${title}-${index}`}>
                 <div
                   className={classNames(
-                    'relative h-0 pb-[100%] w-full overflow-hidden rounded-lg shadow-off-white-900/60 shadow-2xl hover:scale-105 hover:animate-pulse transition-transform',
+                    'relative h-0 pb-[100%] w-full overflow-hidden rounded-lg shadow-off-white-900/60 shadow-2xl hover:scale-105  active:animate-ping hover:animate-pulse',
                   )}>
                   <Image
                     alt={title}
@@ -67,15 +67,15 @@ const ItemOverlay: FC<{item: PortfolioItem; mobile: boolean}> = memo(({item: {ur
     <>
       <a
         className={classNames(
-          'absolute inset-0 h-full w-full bg-gray-900 transition-all duration-300',
-          {'opacity-0 hover:opacity-80': !mobile},
-          showOverlay ? 'opacity-80' : 'opacity-0',
+          'absolute inset-0 h-full w-full bg-black transition-all duration-800 ',
+          {'opacity-0 hover:opacity-90 hover:scale-105': !mobile},
+          showOverlay ? 'opacity-40' : 'opacity-0',
         )}
         href={url}
         onClick={handleItemClick}
         rel="noopener noreferrer"
         target="_blank">
-        <div className="relative h-full w-full p-4 flex flex-col justify-center">
+        <div className="relative h-full w-full p-4 flex flex-col justify-center text-center">
           <div className="flex flex-col gap-y-2 overflow-y-auto overscroll-contain">
             <h2 className="text-center font-bold text-white">{title}</h2>
             <p className="text-xs text-white sm:text-sm">{description}</p>
@@ -90,11 +90,11 @@ const ItemOverlay: FC<{item: PortfolioItem; mobile: boolean}> = memo(({item: {ur
         <div
           className="fixed inset-0 z-50 bg-black/50 backdrop-blur flex items-center justify-center"
           onClick={handleCloseOverlay}>
-          <div className="relative w-11/12 max-w-lg bg-neutral-800 rounded-lg p-6 overflow-y-auto overscroll-contain">
-            <h2 className="text-center font-bold text-white">{title}</h2>
+          <div className="relative w-11/12 max-w-lg bg-black rounded-lg p-6 overflow-y-auto overscroll-contain">
+            <h2 className="text-center font-bold text-white shadow-lg shadow-white transition-none">{title}</h2>
             <p className="text-sm text-white sm:text-base mt-4">{description}</p>
             <Link
-              className="mt-4 w-fit mx-auto bg-golden-brown-300 rounded-md py-2 px-4 text-white hover:bg-orange-600"
+              className="mt-4 w-fit mx-auto  rounded-md py-2 px-4"
               href={url}
               rel="noopener noreferrer"
               target="_blank">
