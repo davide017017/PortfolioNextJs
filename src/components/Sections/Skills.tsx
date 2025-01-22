@@ -46,8 +46,8 @@ const Skills: FC = memo(() => {
     <Section className="bg-off-white-900" sectionId={SectionId.Skills}>
       <div className="bg-off-white-500 py-12">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-dark-olive-700 mb-8 text-center">Skills</h2>
-          <div className="grid gap-8 justify-items-center sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8">
+          <h2 className="text-3xl font-bold font-serif text-dark-olive-700 mb-8 text-center">Skills</h2>
+          <div className="grid gap-8 justify-items-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8">
             {skills.map(skill => (
               <a
                 aria-label={`Vai alla documentazione di ${skill.name}`}

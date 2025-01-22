@@ -13,7 +13,7 @@ const Contact: FC = memo(() => {
       <div className="flex flex-col gap-y-6 text-center">
         {/* Header */}
         <div className="flex flex-col gap-6">
-          <h2 className="text-3xl font-bold text-dark-olive-700">{headerText}</h2>
+          <h2 className="text-3xl font-bold font-serif text-dark-olive-700">{headerText}</h2>
         </div>
         {/* Description and contact information */}
         <div className="order-1 flex flex-col gap-y-4 md:order-2">
@@ -24,7 +24,7 @@ const Contact: FC = memo(() => {
                 <dd className="flex items-center ">
                   <a
                     className={classNames(
-                      'text-xl -m-2 flex rounded-md p-2 text-dark-olive-700 hover:text-off-white-300 focus:outline-none focus:ring-2 focus:ring-golden-brown-50',
+                      'text-xl font-serif -m-2 flex rounded-md p-2 text-dark-olive-700 hover:text-off-white-300 focus:outline-none focus:ring-2 focus:ring-golden-brown-50',
                       {'hover:text-white': href},
                     )}
                     href={href}

@@ -13,7 +13,7 @@ const Socials: FC = memo(() => (
         key={label}
         rel="noopener noreferrer"
         target="_blank">
-        <FontAwesomeIcon className="h-8 w-8 mb-2" icon={icon} />
+        <FontAwesomeIcon className="h-9 w-9 mb-2" icon={icon} />
         <span className="text-sm">{label}</span>
       </a>
     ))}

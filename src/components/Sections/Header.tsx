@@ -9,9 +9,9 @@ export const headerID = 'headerNav';
 // Sezioni di navigazione
 const navSections = ['about', 'skills', 'portfolio', 'contact'];
 
-// Classi CSS di base (ora const dirette)
+// Classi CSS di base
 const baseNavClass =
-  '-m-1.5 p-1.5 font-bold first-letter:uppercase hover:transition-colors hover:duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500';
+  '-m-1 p-1.5 font-bold text-lg rounded-md first-letter:uppercase hover:text-off-white-400 hover:duration-300 focus:outline-none focus-visible:ring-40';
 const baseMobileNavClass =
   'p-2 first-letter:uppercase transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500';
 
@@ -69,13 +69,15 @@ const Header: FC = memo(() => {
 
 const DesktopNav: FC<{navSections: string[]; handleClick: (section: string) => void; currentSection: string | null}> =
   memo(({navSections, handleClick, currentSection}) => (
-    <header className="fixed top-0 z-50 hidden w-full bg-forest-night-200/50 p-4 backdrop-blur sm:block" id={headerID}>
+    <header className=" fixed top-0 z-50 hidden w-full bg-forest-night-200/60 p-4 backdrop-blur sm:block" id={headerID}>
       <nav className="flex justify-center gap-x-8">
         {navSections.map(section => (
           <Link
             className={classNames(
               baseNavClass,
-              section === currentSection ? 'text-golden-brown-100' : 'text-off-white-200',
+              section === currentSection
+                ? 'text-golden-brown-100 border-b-2 border-golden-brown-100'
+                : 'text-off-white-200',
             )}
             href={`/#${section}`}
             key={section}

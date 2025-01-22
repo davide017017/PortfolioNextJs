@@ -15,14 +15,14 @@ const Portfolio: FC = memo(() => {
   return (
     <Section className="bg-forest-night-200" sectionId={SectionId.Portfolio}>
       <div className="flex flex-col gap-y-8">
-        <h2 className="self-center text-xl font-bold text-white">
+        <h2 className="self-center text-xl font-bold  text-white">
           Check out some of my work (da aggiungere ancora i lavori){' '}
         </h2>
         <div className="w-full columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
           {portfolioItems.map((item, index) => {
             const {title, image} = item;
             return (
-              <div className="break-inside-avoid" key={`${title}-${index}`}>
+              <div className="break-inside-avoid p-6 md:p-3 " key={`${title}-${index}`}>
                 <div
                   className={classNames(
                     'relative h-0 pb-[100%] w-full overflow-hidden rounded-lg shadow-off-white-900/60 shadow-2xl hover:scale-105 hover:animate-pulse transition-transform',
@@ -94,7 +94,7 @@ const ItemOverlay: FC<{item: PortfolioItem; mobile: boolean}> = memo(({item: {ur
             <h2 className="text-center font-bold text-white">{title}</h2>
             <p className="text-sm text-white sm:text-base mt-4">{description}</p>
             <Link
-              className="mt-4 w-fit mx-auto bg-orange-500 rounded-md py-2 px-4 text-white hover:bg-orange-600"
+              className="mt-4 w-fit mx-auto bg-golden-brown-300 rounded-md py-2 px-4 text-white hover:bg-orange-600"
               href={url}
               rel="noopener noreferrer"
               target="_blank">

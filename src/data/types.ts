@@ -1,6 +1,6 @@
 import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
 import {StaticImageData} from 'next/image';
-import {ForwardRefExoticComponent, RefAttributes, SVGProps} from 'react';
+import {ForwardRefExoticComponent, JSX,RefAttributes, SVGProps} from 'react';
 
 export interface HomepageMeta {
   title: string;
@@ -13,7 +13,7 @@ export interface HomepageMeta {
  */
 export interface Hero {
   id?: string;
-  imageSrc: string;
+  imageSrc: StaticImageData;
   name: string;
   description: JSX.Element;
   actions: HeroActionItem[];
@@ -31,7 +31,7 @@ interface HeroActionItem {
  */
 export interface About {
   id?: string;
-  profileImageSrc?: string;
+  profileImageSrc?: string | StaticImageData;
   description: string;
   aboutItems: AboutItem[];
 }

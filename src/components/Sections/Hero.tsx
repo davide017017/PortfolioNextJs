@@ -23,8 +23,8 @@ const Hero: FC = memo(() => {
           src={imageSrc}
         />
         <div className="z-10 max-w-screen-lg px-4 lg:px-0">
-          <div className="flex flex-col items-center gap-6 rounded-xl bg-forest-night-200/40 p-6 text-center shadow-lg backdrop-blur-sm">
-            <h1 className="text-4xl font-bold font-mono text-off-white-200 sm:text-5xl lg:text-7xl">{name}</h1>
+          <div className="flex flex-col items-center gap-6 rounded-xl bg-forest-night-200/40 p-7 text-center shadow-lg backdrop-blur-sm">
+            <h1 className="text-4xl font-bold font-serif text-off-white-200 sm:text-5xl lg:text-7xl">{name}</h1>
             {description}
             <Socials />
             <div className="flex justify-center w-full gap-4">
@@ -47,7 +47,7 @@ const Hero: FC = memo(() => {
         </div>
         <div className="absolute bottom-6 inset-x-0 flex justify-center">
           <a
-            className="rounded-full bg-off-white-200 p-1 ring-white ring-offset-2 ing-offset-golden-brown-50/80 focus:outline-none focus:ring-2 sm:p-2"
+            className="rounded-full bg-off-white-200 p-1 ring-white ring-offset-2 ring-offset-golden-brown-50/80 focus:outline-none focus:ring-2 sm:p-2"
             href={`/#${SectionId.About}`}>
             <ChevronDownIcon className="h-5 w-5 sm:h-6 sm:w-6" />
           </a>

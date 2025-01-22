@@ -3,10 +3,10 @@ import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
   CodeBracketSquareIcon,
+  DevicePhoneMobileIcon,
   EnvelopeIcon,
-  GlobeAltIcon,
+  GlobeEuropeAfricaIcon,
   MapPinIcon,
-  PhoneIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
 import React from 'react';
@@ -89,7 +89,7 @@ export const aboutData: About = {
       text: 'HTML, CSS, JavaScript, React, Next.js, TypeScript, Node.js,  Tailwind, Git',
       Icon: CodeBracketSquareIcon,
     },
-    {label: 'Lingue', text: 'Italiano (madrelingua), Inglese (B2)', Icon: GlobeAltIcon},
+    {label: 'Lingue', text: 'Italiano (madrelingua), Inglese (B2)', Icon: GlobeEuropeAfricaIcon},
     {
       label: 'Interessi',
       text: 'Informatica, Giardinaggio, Manga, Viaggi, Musica (Batteria), Cucina',
@@ -106,25 +106,25 @@ export const portfolioItems: PortfolioItem[] = [
   {
     title: 'Project title 1',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: '',
     image: porfolioImage1,
   },
   {
     title: 'Project title 2',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: '',
     image: porfolioImage2,
   },
   {
     title: 'Project title 3',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: '',
     image: porfolioImage3,
   },
   {
     title: 'Project title 4',
     description: 'Give a short description of your project here.',
-    url: 'https://reactresume.com',
+    url: '',
     image: porfolioImage4,
   },
 ];
@@ -138,7 +138,7 @@ export const contactData = {
     {
       text: '+39 340 349 6620',
       href: 'tel:+393403496620',
-      Icon: PhoneIcon,
+      Icon: DevicePhoneMobileIcon,
       srLabel: 'Numero di telefono',
     },
     {
