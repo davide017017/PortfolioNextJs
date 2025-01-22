@@ -7,7 +7,7 @@ import {FC, Fragment, memo, useEffect, useRef, useState} from 'react';
 // ID per l'header
 export const headerID = 'headerNav';
 // Sezioni di navigazione
-const navSections = ['about', 'skills','softskills', 'portfolio', 'contact', ];
+const navSections = ['about', 'skills', 'softskills', 'portfolio', 'contact'];
 
 // Classi CSS di base
 const baseNavClass =
