@@ -4,9 +4,6 @@
 
 # Davide Martinico - Portfolio
 
-[![Licenza](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Ultimo Commit](https://img.shields.io/github/last-commit/[Il Tuo Username]/[Nome Repo])](https://github.com/[Il Tuo Username]/[Nome Repo]/commits/master)
-
 >Portfolio Creato con React e NextJs  
 
 (https://davide-martinico-portfolio.netlify.app/#skills)
@@ -27,11 +24,6 @@ Sono uno sviluppatore web con una forte passione per la tecnologia e un approcci
 *   **Diploma:** Tecnico dei Sistemi Energetici
 
 ## Progetti
-
-*(Aggiungi qui i tuoi progetti. Ecco un esempio)*
-
-*   **[Nome del Progetto 1]:** [Breve descrizione del progetto e tecnologie utilizzate]. [Link al progetto](https://link-al-progetto-1.com) - *Esempio: Un'applicazione web per la gestione di inventari sviluppata con React, Node.js e un database MongoDB.*
-*   **[Nome del Progetto 2]:** [Breve descrizione del progetto e tecnologie utilizzate]. [Link al progetto](https://link-al-progetto-2.com) - *Esempio: Un sito web portfolio personale realizzato con Next.js e Tailwind CSS.*
 
 https://github.com/davide017017?tab=repositories
 
