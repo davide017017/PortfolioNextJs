@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true, 
-  swcMinify: true,      
+  reactStrictMode: true,    
   images: {              
     remotePatterns: [
       {
@@ -13,15 +12,6 @@ const nextConfig = {
         hostname: 'source.unsplash.com',
       },
     ],
-  },
-  webpack(config, options) {
-    config.module.rules.push({
-      test: /\.svg$/i,
-      issuer: /\.[jt]sx?$/,
-      use: ['@svgr/webpack'],
-    });
-
-    return config;
   },
 };
 
