@@ -49,6 +49,6 @@ Genova
 
 Questo portfolio è distribuito sotto licenza MIT. Vedi il file `LICENSE` per maggiori informazioni.
 
-Copyright (c) 2024 davide017017
+Copyright (c) 2025 davide017017
 
 Sono sempre alla ricerca di nuove opportunità e collaborazioni. Non esitare a contattarmi!
