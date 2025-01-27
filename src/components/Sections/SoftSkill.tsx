@@ -71,8 +71,7 @@ const SoftSkills: FC = memo(() => {
             {softSkills.map(softSkill => (
               <div
                 className="shadow-lg shadow-black p-6 rounded-lg bg-off-white-700  hover:scale-105 transition-all duration-300 ease-in-out flex flex-col items-center justify-between h-full" // h-full e justify-between
-                key={softSkill.id}
-              >
+                key={softSkill.id}>
                 <div className="flex flex-col items-center text-sage-green-400 ">
                   {softSkill.icon}
                   <span className="mt-2 text-dark-olive-700 text-2xl text-center break-words">{softSkill.name}</span>
