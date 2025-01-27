@@ -13,7 +13,7 @@ import React from 'react';
 
 import heroImage from '../images/header-background.webp';
 import perdiana from '../images/portfolio/PerdianaReview.jpg';
-import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
+import todoAppImage from '../images/portfolio/ToDo-App.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import profilepic from '../images/profilepic.jpg';
@@ -111,10 +111,10 @@ export const portfolioItems: PortfolioItem[] = [
     image: perdiana,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: '',
-    image: porfolioImage2,
+    title: 'ToDo-App ',
+    description: 'Una applicazione per la gestione di liste di attività (To-Do List) con React e salvataggio in localStorage.',
+    url: 'https://todo-app-davide-martinco.netlify.app/',
+    image: todoAppImage,
   },
   {
     title: 'Project title 3',
