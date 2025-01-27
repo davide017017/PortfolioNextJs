@@ -1,23 +1,28 @@
-import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
-import {
-  AcademicCapIcon,
-  ArrowDownTrayIcon,
-  CodeBracketSquareIcon,
-  DevicePhoneMobileIcon,
-  EnvelopeIcon,
-  GlobeEuropeAfricaIcon,
-  MapPinIcon,
-  SparklesIcon,
-} from '@heroicons/react/24/outline';
-import React from 'react';
+import React from 'react'; // Import di React
 
+// Import di icone da librerie esterne (raggruppate e ordinate alfabeticamente)
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+    AcademicCapIcon,
+    ArrowDownTrayIcon,
+    CodeBracketSquareIcon,
+    DevicePhoneMobileIcon,
+    EnvelopeIcon,
+    GlobeEuropeAfricaIcon,
+    MapPinIcon,
+    SparklesIcon,
+} from '@heroicons/react/24/outline';
+
+// Import di immagini (raggruppate)
 import heroImage from '../images/header-background.webp';
 import perdiana from '../images/portfolio/PerdianaReview.jpg';
 import todoAppImage from '../images/portfolio/ToDo-App.jpg';
 import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import profilepic from '../images/profilepic.jpg';
-import {About, Hero, HomepageMeta, PortfolioItem, Social} from './types';
+
+// Import di tipi/interfacce interne (raggruppate)
+import { About, Hero, HomepageMeta, PortfolioItem, Social } from './types';
 
 /**
  * Page meta data
