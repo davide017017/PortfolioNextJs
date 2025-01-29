@@ -102,7 +102,7 @@ const MobileNav: FC<{
   <>
     <button
       aria-label="Apri il menu di navigazione principale"
-      className="fixed right-2 top-2 z-40 rounded-md bg-golden-brown-200 p-2 ring-forest-night-200/60 hover:bg-sage-green-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 sm:hidden"
+      className="fixed right-2 top-2 z-40 rounded-md bg-golden-brown-200 p-2 ring-forest-night-200/60 hover:bg-sage-green-100 focus:outline-none sm:hidden"
       onClick={toggleOpen}>
       <Bars3BottomRightIcon className="h-8 w-8 text-off-white-200" />
     </button>
