@@ -14,12 +14,11 @@ import React from 'react'; // Import di React
 
 // Import di immagini (raggruppate)
 import heroImage from '../images/header-background.webp';
-import profilepic from '../images/profilepic.jpg';
+import MorraCineseView from '../images/Morra-Cinese-View.jpg';
 import perdiana from '../images/portfolio/PerdianaReview.jpg';
-import todoAppImage from '../images/portfolio/ToDo-App.jpg';
-import MorraCineseView from '../images/Morra-Cinese-View.jpg'
 import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-
+import todoAppImage from '../images/portfolio/ToDo-App.jpg';
+import profilepic from '../images/profilepic.jpg';
 import {About, Hero, HomepageMeta, PortfolioItem, Social} from './types';
 
 /**
