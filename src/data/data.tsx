@@ -14,12 +14,12 @@ import React from 'react'; // Import di React
 
 // Import di immagini (raggruppate)
 import heroImage from '../images/header-background.webp';
-import perdiana from '../images/portfolio/PerdianaReview.jpg';
-import porfolioImage3 from '../images/portfolio/portfolio-3.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
-import todoAppImage from '../images/portfolio/ToDo-App.jpg';
 import profilepic from '../images/profilepic.jpg';
-// Import di tipi/interfacce interne (raggruppate)
+import perdiana from '../images/portfolio/PerdianaReview.jpg';
+import todoAppImage from '../images/portfolio/ToDo-App.jpg';
+import MorraCineseView from '../images/Morra-Cinese-View.jpg'
+import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
+
 import {About, Hero, HomepageMeta, PortfolioItem, Social} from './types';
 
 /**
@@ -130,10 +130,10 @@ export const portfolioItems: PortfolioItem[] = [
     image: todoAppImage,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: '',
-    image: porfolioImage3,
+    title: 'MorraCineseView',
+    description: 'Un divertente gioco di Morra Cinese (Carta, Pietra, Forbici) sviluppato con Next.js e Tailwind CSS.',
+    url: 'https://morra-cinese-davide017017.netlify.app/',
+    image: MorraCineseView,
   },
   {
     title: 'Project title 4',
