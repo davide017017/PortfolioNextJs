@@ -10,26 +10,26 @@ Sviluppatore web full-stack con una forte passione per la tecnologia e un approc
 
 ## Formazione
 
-*   Corso Full Stack Web Developer: Musa Formazione
+- Corso Full Stack Web Developer: Musa Formazione
 
 ## Studi
 
-*   Diploma: Tecnico dei Sistemi Energetici
+- Diploma: Tecnico dei Sistemi Energetici
 
 ## Progetti
 
-*   [Il mio profilo GitHub](https://github.com/davide017017)
+- [Il mio profilo GitHub](https://github.com/davide017017)
 
 ## Tecnologie
 
-*   Linguaggi di Programmazione: JavaScript, TypeScript, Node.js
-*   Framework e Librerie: React, Next.js, Tailwind CSS
-*   Altro: HTML, CSS, Git
+- Linguaggi di Programmazione: JavaScript, TypeScript, Node.js
+- Framework e Librerie: React, Next.js, Tailwind CSS
+- Altro: HTML, CSS, Git
 
 ## Lingue
 
-*   Italiano (Madrelingua)
-*   Inglese (B2)
+- Italiano (Madrelingua)
+- Inglese (B2)
 
 ## Interessi
 
@@ -37,9 +37,9 @@ Informatica, Giardinaggio, Manga, Viaggi, Musica (Batteria), Cucina
 
 ## Contatti
 
-*   Email: davide017@hotmail.it
-*   LinkedIn: [Il tuo profilo LinkedIn](https://www.linkedin.com/in/iltuoprofilo)
-*   GitHub: [github.com/davide017017](https://github.com/davide017017)
+- Email: davide017@hotmail.it
+- LinkedIn: [Il tuo profilo LinkedIn](https://www.linkedin.com/in/iltuoprofilo)
+- GitHub: [github.com/davide017017](https://github.com/davide017017)
 
 ## Città
 

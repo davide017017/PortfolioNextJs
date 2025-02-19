@@ -4,20 +4,25 @@ module.exports = {
 
   theme: {
     extend: {
+      fontSize: {
+        xxs: '0.625rem', // Esempio di dimensione personalizzata
+      },
       colors: {
-        'forest-night': { // Gradazioni per forest-night
-          50: '#030f14',   // Molto chiaro
-          100: '#010a0f',  // Più chiaro
-          200: '#00070a',  // Colore base (leggermente scurito per coerenza)
+        'forest-night': {
+          // Gradazioni per forest-night
+          50: '#030f14', // Molto chiaro
+          100: '#010a0f', // Più chiaro
+          200: '#00070a', // Colore base (leggermente scurito per coerenza)
           300: '#000407',
           400: '#000204',
           500: '#000102',
           600: '#000001',
-          700: '#000000',  // Quasi nero
+          700: '#000000', // Quasi nero
           800: '#000000',
-          900: '#000000',   // Nero
+          900: '#000000', // Nero
         },
-        'dark-olive': { // Gradazioni per dark-olive
+        'dark-olive': {
+          // Gradazioni per dark-olive
           50: '#383b2b',
           100: '#303323',
           200: '#282b1b', // Colore base

@@ -1,84 +1,84 @@
 import {FC, memo} from 'react';
-import {
-  FaComment, // Comunicazione
-  FaPeopleCarry, // Lavoro di squadra
-  FaUserClock, // Gestione del tempo
-} from 'react-icons/fa';
-import {GiBrain} from 'react-icons/gi'; // Pensiero critico
-import {GrTroubleshoot} from 'react-icons/gr'; // Risoluzione dei problemi
-import {LuRocket} from 'react-icons/lu'; // Adattabilità/Innovazione
+import {FaComment, FaPeopleCarry, FaUserClock} from 'react-icons/fa';
+import {GiBrain} from 'react-icons/gi';
+import {GrTroubleshoot} from 'react-icons/gr';
+import {LuRocket} from 'react-icons/lu';
 
 import {SectionId} from '../../data/data';
 import Section from '../Layout/Section';
 
 const SoftSkills: FC = memo(() => {
-  const softSkills = [
+  const sizeIcon = 32;
+  const softSkillsData = [
     {
       id: 1,
       name: 'Comunicazione',
-      icon: <FaComment size={64} />,
+      icon: <FaComment size={sizeIcon} />, // Icona direttamente qui
       alt: 'Icona abilità comunicative',
-      description: 'Trasmettere efficacemente concetti tecnici a un pubblico sia tecnico che non tecnico.',
+      description:
+        'Fornisco consulenza chiara e adattata a diversi interlocutori. Gestisco efficacemente le relazioni con i fornitori.',
     },
     {
       id: 2,
       name: 'Risoluzione dei problemi',
-      icon: <GrTroubleshoot size={64} />,
+      icon: <GrTroubleshoot size={sizeIcon} />,
       alt: 'Icona abilità risoluzione problemi',
       description:
-        'Analizzare metodicamente i problemi, sviluppare soluzioni creative e implementarle in modo efficiente.',
+        'Trovo soluzioni creative per la gestione di attività complesse. Risolvo problemi specifici per le esigenze dei clienti.',
     },
     {
       id: 3,
       name: 'Lavoro di squadra',
-      icon: <FaPeopleCarry size={64} />,
+      icon: <FaPeopleCarry size={sizeIcon} />,
       alt: 'Icona abilità lavoro di squadra',
       description:
-        'Collaborare efficacemente con gli altri per raggiungere un obiettivo comune, favorendo un ambiente di lavoro positivo e produttivo.',
+        'Collaboro attivamente per raggiungere obiettivi comuni. Contribuisco a un ambiente di lavoro positivo e produttivo.',
     },
     {
       id: 4,
       name: 'Adattabilità',
-      icon: <LuRocket size={64} />,
+      icon: <LuRocket size={sizeIcon} />,
       alt: 'Icona abilità adattabilità',
       description:
-        'Accogliere il cambiamento, imparare prontamente nuove tecnologie e adattarsi ai requisiti evolutivi del progetto.',
+        'Mi adatto con successo a diversi ruoli e contesti lavorativi. Apprendo rapidamente nuove competenze e tecnologie.',
     },
     {
       id: 5,
       name: 'Gestione del tempo',
-      icon: <FaUserClock size={64} />,
+      icon: <FaUserClock size={sizeIcon} />,
       alt: 'Icona gestione del tempo',
       description:
-        'Organizzare e pianificare efficacemente il tempo per rispettare le scadenze e ottimizzare la produttività.',
+        'Organizzo efficacemente il tempo per gestire attività multiple. Rispetto le scadenze e mi impegno per la produttività.',
     },
     {
       id: 6,
       name: 'Pensiero critico',
-      icon: <GiBrain size={64} />,
+      icon: <GiBrain size={sizeIcon} />,
       alt: 'Icona pensiero critico',
       description:
-        'Analizzare le informazioni in modo obiettivo, valutando diverse prospettive per prendere decisioni informate.',
+        "Prendo decisioni informate basate su analisi accurate. Identifico le priorità e valuto l'impatto delle azioni.",
     },
   ];
-
+  // Ordinamento (opzionale - se necessario)
+  const sortedSoftSkills = [...softSkillsData].sort((a, b) => a.name.localeCompare(b.name));
   return (
     <Section className="bg-dark-olive-50" sectionId={SectionId.SoftSkills}>
-      <div className="py-3 ">
-        <div className="container mx-auto px-8 ">
-          <h2 className="text-3xl font-bold font-serif text-off-white-100 mb-8 text-center">Soft Skills</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-8">
-            {softSkills.map(softSkill => (
+      <div className="py-3">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold font-serif text-off-white-100 mb-4 text-center">Soft Skills</h2>
+          <div className="grid gap-1 justify-items-center grid-cols-3 md:grid-cols-6">
+            {sortedSoftSkills.map(softSkill => (
               <div
-                className="shadow-lg shadow-black p-6 rounded-lg bg-off-white-700 hover:scale-105 transition-all duration-300 ease-in-out flex flex-col "
+                className="shadow-lg shadow-black rounded-lg bg-off-white-700 hover:scale-105 transition-all duration-300 ease-in-out flex flex-col px-1 py-2 w-full"
                 key={softSkill.id}>
-                <div className="flex flex-col items-center text-sage-green-400 ">
-                  {softSkill.icon}
-                  <span className="mt-2 text-dark-olive-700 text-2xl text-center break-words">{softSkill.name}</span>
+                <div className="flex flex-col items-center text-sage-green-400">
+                  {softSkill.icon} {/* Icona usata direttamente */}
+                  <span className="mt-2 text-xxs font-bold text-dark-olive-700 text-center break-words">
+                    {softSkill.name}
+                  </span>
                 </div>
                 <div className="mt-4 text-center text-dark-olive-700">
-                  {' '}
-                  <p className="break-words">{softSkill.description}</p>
+                  <p className="break-words text-xxs">{softSkill.description}</p>
                 </div>
               </div>
             ))}

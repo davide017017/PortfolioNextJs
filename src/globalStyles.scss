@@ -8,7 +8,8 @@
     scrollbar-width: none; /* Firefox */
   }
 
-  .no-scrollbar::-webkit-scrollbar { /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    /* Chrome, Safari and Opera */
     display: none;
   }
 }
@@ -29,9 +30,16 @@ html {
 body {
   position: relative;
   width: 100%;
-  color: #444; /* Abbreviazione di #444444 */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif;
-  background-color: #fafafa;
+  color: #2c2c2c; /* Abbreviazione di #444444 */
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Ubuntu,
+    'Helvetica Neue',
+    sans-serif;
+  background-color: #acacac;
 }
 
 * {

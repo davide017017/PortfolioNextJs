@@ -16,7 +16,6 @@ import React from 'react'; // Import di React
 import heroImage from '../images/header-background.webp';
 import MorraCineseView from '../images/portfolio/Morra-Cinese-View.jpg';
 import perdiana from '../images/portfolio/PerdianaReview.jpg';
-import porfolioImage4 from '../images/portfolio/portfolio-4.jpg';
 import todoAppImage from '../images/portfolio/ToDo-App.jpg';
 import profilepic from '../images/profilepic.jpg';
 import {About, Hero, HomepageMeta, PortfolioItem, Social} from './types';
@@ -27,7 +26,7 @@ import {About, Hero, HomepageMeta, PortfolioItem, Social} from './types';
 export const homePageMeta: HomepageMeta = {
   title: 'Davide Martinico | Aspirante Sviluppatore Full-Stack',
   description:
-    'Portfolio di Davide Martinico, studente di sviluppo full-stack. Esploro le tecnologie web più moderne, tra cui React, Next.js, TypeScript e Tailwind CSS, per creare applicazioni innovative.',
+    'Portfolio di Davide Martinico, studente di sviluppo full-stack. Esploro le tecnologie web più moderne, tra cui React, Next.js, TypeScript, Tailwind CSS, MySQl e PHP per creare applicazioni innovative.',
 };
 
 /**
@@ -91,7 +90,7 @@ export const aboutData: About = {
     {label: 'Studi', text: 'Diploma - Tecnico dei Sistemi Energetici', Icon: AcademicCapIcon},
     {
       label: 'Skills',
-      text: 'HTML, CSS, JavaScript, React, Next.js, TypeScript, Node.js,  Tailwind, Git',
+      text: 'HTML, CSS, JavaScript, React, Next.js, TypeScript, Node.js,  Tailwind, Git, MYSQL, PHP ',
       Icon: CodeBracketSquareIcon,
     },
     {label: 'Lingue', text: 'Italiano (madrelingua), Inglese (B2)', Icon: GlobeEuropeAfricaIcon},
@@ -133,12 +132,6 @@ export const portfolioItems: PortfolioItem[] = [
     description: 'Un divertente gioco di Morra Cinese (Carta, Pietra, Forbici) sviluppato con Next.js e Tailwind CSS.',
     url: 'https://morra-cinese-davide017017.netlify.app/',
     image: MorraCineseView,
-  },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: '',
-    image: porfolioImage4,
   },
 ];
 
