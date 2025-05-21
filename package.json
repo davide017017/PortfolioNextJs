@@ -10,7 +10,8 @@
     "lint": "yarn run -T prettier --write './src/**/*.{js,jsx,json,ts,tsx}' && eslint './src/**/*.{js,jsx,ts,tsx}' --fix --max-warnings=0",
     "start": "yarn next start",
     "sitemap": "yarn next-sitemap",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "format": "eslint './src/**/*.{js,jsx,ts,tsx}' --fix && prettier --write ."
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
@@ -49,6 +50,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-module-resolver": "^1.5.0",
     "eslint-plugin-monorepo": "^0.3.2",
+    "eslint-plugin-prettier": "^5.4.0",
     "eslint-plugin-react": "^7.33.1",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-memo": "^0.0.3",

@@ -1,8 +1,8 @@
-import {Dialog, Transition} from '@headlessui/react';
-import {Bars3BottomRightIcon} from '@heroicons/react/24/outline';
+import { Dialog, Transition } from '@headlessui/react';
+import { Bars3BottomRightIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Link from 'next/link';
-import {FC, Fragment, memo, useEffect, useRef, useState} from 'react';
+import { FC, Fragment, memo, useEffect, useRef, useState } from 'react';
 
 const headerID = 'headerNav';
 const navSections = ['about', 'skills', 'softskills', 'portfolio', 'contact'];
@@ -35,10 +35,12 @@ const Header: FC = memo(() => {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, {threshold: 0.5});
+    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
     observerRef.current = observer;
 
-    const targets = navSections.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[];
+    const targets = navSections
+      .map(id => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
 
     targets.forEach(target => observer.observe(target));
 
@@ -62,7 +64,11 @@ const Header: FC = memo(() => {
         navSections={navSections}
         toggleOpen={toggleOpen}
       />
-      <DesktopNav currentSection={currentSection} handleClick={handleClick} navSections={navSections} />
+      <DesktopNav
+        currentSection={currentSection}
+        handleClick={handleClick}
+        navSections={navSections}
+      />
     </>
   );
 });
@@ -71,8 +77,11 @@ const DesktopNav: FC<{
   navSections: string[];
   handleClick: (section: string) => void;
   currentSection: string | null;
-}> = memo(({navSections, handleClick, currentSection}) => (
-  <header className="fixed top-0 z-50 hidden w-full bg-forest-night-200/60 p-3 backdrop-blur sm:block" id={headerID}>
+}> = memo(({ navSections, handleClick, currentSection }) => (
+  <header
+    className="fixed top-0 z-50 hidden w-full bg-forest-night-200/60 p-3 backdrop-blur sm:block"
+    id={headerID}
+  >
     <nav className="flex justify-center gap-x-10">
       {navSections.map(section => (
         <Link
@@ -84,7 +93,8 @@ const DesktopNav: FC<{
           )}
           href={`/#${section}`}
           key={section}
-          onClick={() => handleClick(section)}>
+          onClick={() => handleClick(section)}
+        >
           {section}
         </Link>
       ))}
@@ -98,12 +108,13 @@ const MobileNav: FC<{
   toggleOpen: () => void;
   handleClick: (section: string) => void;
   currentSection: string | null;
-}> = memo(({navSections, isOpen, toggleOpen, handleClick, currentSection}) => (
+}> = memo(({ navSections, isOpen, toggleOpen, handleClick, currentSection }) => (
   <>
     <button
       aria-label="Apri il menu di navigazione principale"
       className="fixed right-2 top-2 z-40 rounded-md bg-golden-brown-200 p-2 ring-forest-night-200/60 hover:bg-sage-green-100 focus:outline-none sm:hidden"
-      onClick={toggleOpen}>
+      onClick={toggleOpen}
+    >
       <Bars3BottomRightIcon className="h-8 w-8 text-off-white-200" />
     </button>
     <Transition.Root as={Fragment} show={isOpen}>
@@ -115,7 +126,8 @@ const MobileNav: FC<{
           enterTo="opacity-100"
           leave="transition-opacity ease-linear duration-300"
           leaveFrom="opacity-100"
-          leaveTo="opacity-0">
+          leaveTo="opacity-0"
+        >
           <Dialog.Overlay className="fixed inset-0 bg-forest-night-200 bg-opacity-75" />
         </Transition.Child>
         <Transition.Child
@@ -125,7 +137,8 @@ const MobileNav: FC<{
           enterTo="translate-x-0"
           leave="transition ease-in-out duration-300 transform"
           leaveFrom="translate-x-0"
-          leaveTo="-translate-x-full">
+          leaveTo="-translate-x-full"
+        >
           <div className="relative w-4/5 bg-dark-olive-700">
             <nav className="mt-5 flex flex-col gap-y-2 px-2">
               {navSections.map(section => (
@@ -141,7 +154,8 @@ const MobileNav: FC<{
                   )}
                   href={`/#${section}`}
                   key={section}
-                  onClick={() => handleClick(section)}>
+                  onClick={() => handleClick(section)}
+                >
                   {section}
                 </Link>
               ))}

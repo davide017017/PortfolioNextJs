@@ -1,6 +1,6 @@
-import {IconDefinition} from '@fortawesome/fontawesome-svg-core';
-import {StaticImageData} from 'next/image';
-import {ForwardRefExoticComponent, JSX, RefAttributes, SVGProps} from 'react';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { StaticImageData } from 'next/image';
+import { ForwardRefExoticComponent, JSX, RefAttributes, SVGProps } from 'react';
 
 export interface HomepageMeta {
   title: string;

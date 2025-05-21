@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import {FC, memo, PropsWithChildren} from 'react';
+import { FC, memo, PropsWithChildren } from 'react';
 
-import {HomepageMeta} from '../../data/types';
+import { HomepageMeta } from '../../data/types';
 
 interface PageProps extends PropsWithChildren<HomepageMeta> {}
 
-const Page: FC<PageProps> = memo(({children, title, description}) => (
+const Page: FC<PageProps> = memo(({ children, title, description }) => (
   <>
     <Head>
       <title>{title}</title>
@@ -17,7 +17,10 @@ const Page: FC<PageProps> = memo(({children, title, description}) => (
       <meta content={title} property="og:title" />
       <meta content={description} property="og:description" />
       <meta content="/ogImage.JPG" property="og:image" />
-      <meta content="https://yourwebsite.com" property="og:https://davide-martinico-portfolio.netlify.app/" />
+      <meta
+        content="https://yourwebsite.com"
+        property="og:https://davide-martinico-portfolio.netlify.app/"
+      />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
     </Head>
     {children}

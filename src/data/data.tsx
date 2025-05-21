@@ -1,5 +1,5 @@
 // Import di icone da librerie esterne (raggruppate e ordinate alfabeticamente)
-import {faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
   AcademicCapIcon,
   ArrowDownTrayIcon,
@@ -18,7 +18,8 @@ import MorraCineseView from '../images/portfolio/Morra-Cinese-View.jpg';
 import perdiana from '../images/portfolio/PerdianaReview.jpg';
 import todoAppImage from '../images/portfolio/ToDo-App.jpg';
 import profilepic from '../images/profilepic.jpg';
-import {About, Hero, HomepageMeta, PortfolioItem, Social} from './types';
+import Synapsyscreen from '../images/portfolio/SYNAPSIlogo.png';
+import { About, Hero, HomepageMeta, PortfolioItem, Social } from './types';
 
 /**
  * Page meta data
@@ -53,17 +54,23 @@ export const heroData: Hero = {
     <>
       <div className="mx-auto max-w-prose">
         <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg">
-          Sviluppatore web full-stack in crescita, con competenze in React, Next.js, TypeScript e Tailwind CSS.
+          Sviluppatore full-stack junior con esperienza in <strong>Laravel</strong>,{' '}
+          <strong>PHP</strong>, <strong>MySQL</strong> e <strong>Tailwind CSS</strong>, affiancata
+          da solide basi in <strong>React</strong>, <strong>Next.js</strong> e{' '}
+          <strong>TypeScript</strong>.
         </p>
         <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg mt-4">
-          Background in gestione e coordinamento.
+          Approccio pratico e orientato alla soluzione, con particolare attenzione alla scrittura di
+          codice chiaro e manutenibile.
         </p>
         <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg mt-4">
-          Appassionato di tecnologia e orientato alla soluzione.
+          Background in gestione e coordinamento, utile per collaborare in team e contribuire al
+          raggiungimento di obiettivi concreti.
         </p>
       </div>
     </>
   ),
+
   actions: [
     {
       href: '/Cv-Davide Martinico.pdf',
@@ -84,22 +91,26 @@ export const heroData: Hero = {
  */
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Appassionato di tecnologia e con una mentalità orientata alla soluzione, affronto le sfide dello sviluppo web con entusiasmo e precisione. Il mio background in gestione e coordinamento mi fornisce una solida base per lavorare in team e raggiungere obiettivi concreti. Sono determinato a crescere come sviluppatore full-stack, mettendo a disposizione le mie competenze in React, Next.js, TypeScript e Tailwind CSS per creare applicazioni web performanti e user-friendly.`,
+  description: `Junior Full-Stack Developer con background nel settore retail e una forte passione per lo sviluppo web. Dopo aver consolidato le competenze frontend, mi sto specializzando nel backend con PHP e Laravel. Lavoro con tecnologie moderne come React, Next.js, Tailwind CSS e MySQL, con particolare attenzione alla qualità del codice e alla user experience. Attualmente approfondisco Laravel avanzato, API REST e CI/CD con Docker, con l'obiettivo di crescere come sviluppatore completo e affidabile.`,
   aboutItems: [
-    {label: 'Formazione', text: 'Corso Full Stack Web Developer presso Musa Formazione', Icon: AcademicCapIcon},
-    {label: 'Studi', text: 'Diploma - Tecnico dei Sistemi Energetici', Icon: AcademicCapIcon},
+    {
+      label: 'Formazione',
+      text: 'Corso Full Stack Web Developer presso Musa Formazione',
+      Icon: AcademicCapIcon,
+    },
+    { label: 'Studi', text: 'Diploma - Tecnico dei Sistemi Energetici', Icon: AcademicCapIcon },
     {
       label: 'Skills',
-      text: 'HTML, CSS, JavaScript, React, Next.js, TypeScript, Node.js,  Tailwind, Git, MYSQL, PHP ',
+      text: 'HTML, CSS, JavaScript, TypeScript, Blade, React, Next.js, Tailwind CSS, PHP, Laravel, MySQL, Node.js, Git, Docker',
       Icon: CodeBracketSquareIcon,
     },
-    {label: 'Lingue', text: 'Italiano (madrelingua), Inglese (B2)', Icon: GlobeEuropeAfricaIcon},
+    { label: 'Lingue', text: 'Italiano (madrelingua), Inglese (B2)', Icon: GlobeEuropeAfricaIcon },
     {
       label: 'Interessi',
       text: 'Informatica, Giardinaggio, Manga, Viaggi, Musica (Batteria), Cucina',
       Icon: SparklesIcon,
     },
-    {label: 'Città', text: 'Genova - IT', Icon: MapPinIcon},
+    { label: 'Città', text: 'Genova - IT', Icon: MapPinIcon },
   ],
 };
 
@@ -129,9 +140,17 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     title: 'MorraCineseView',
-    description: 'Un divertente gioco di Morra Cinese (Carta, Pietra, Forbici) sviluppato con Next.js e Tailwind CSS.',
+    description:
+      'Un divertente gioco di Morra Cinese (Carta, Pietra, Forbici) sviluppato con Next.js e Tailwind CSS.',
     url: 'https://morra-cinese-davide017017.netlify.app/',
     image: MorraCineseView,
+  },
+  {
+    title: 'Synapsi',
+    description:
+      "Synapsi Finance è un'applicazione Laravel modulare progettata per semplificare la gestione finanziaria personale e professionale",
+    url: 'https://github.com/davide017017/Synapsy',
+    image: Synapsyscreen,
   },
 ];
 
@@ -166,6 +185,6 @@ export const contactData = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'GitHub', href: 'https://github.com/davide017017', icon: faGithub},
-  {label: 'LinkedIn', href: 'https://www.linkedin.com', icon: faLinkedin},
+  { label: 'GitHub', href: 'https://github.com/davide017017', icon: faGithub },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com', icon: faLinkedin },
 ];
