@@ -4,9 +4,9 @@
 
 > Sviluppatore web full-stack appassionato con l'obiettivo di creare applicazioni innovative e performanti. Esplora i miei progetti e scopri come posso contribuire al tuo team.
 
-## Profilo
+## Profilo con progetti e conoscenze
 
-Sviluppatore web full-stack con una forte passione per la tecnologia e un approccio orientato alla soluzione dei problemi. Specializzato in React, Next.js e Tailwind CSS, mi appassiona la creazione di applicazioni web performanti e user-friendly. Il mio background in gestione e coordinamento mi permette di lavorare efficacemente in team e di raggiungere obiettivi concreti. Sono costantemente impegnato a sviluppare le mie competenze come sviluppatore full-stack e sono alla ricerca di nuove opportunità per crescere professionalmente e contribuire a progetti stimolanti.
+- [Il mio profilo GitHub](https://github.com/davide017017)
 
 ## Formazione
 
@@ -15,10 +15,6 @@ Sviluppatore web full-stack con una forte passione per la tecnologia e un approc
 ## Studi
 
 - Diploma: Tecnico dei Sistemi Energetici
-
-## Progetti e Tecnologie
-
-- [Il mio profilo GitHub](https://github.com/davide017017)
 
 ## Lingue
 
