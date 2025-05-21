@@ -16,15 +16,9 @@ Sviluppatore web full-stack con una forte passione per la tecnologia e un approc
 
 - Diploma: Tecnico dei Sistemi Energetici
 
-## Progetti
+## Progetti e Tecnologie
 
 - [Il mio profilo GitHub](https://github.com/davide017017)
-
-## Tecnologie
-
-- Linguaggi di Programmazione: JavaScript, TypeScript, Node.js
-- Framework e Librerie: React, Next.js, Tailwind CSS
-- Altro: HTML, CSS, Git
 
 ## Lingue
 
