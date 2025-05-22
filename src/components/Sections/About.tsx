@@ -40,8 +40,8 @@ const About: FC = memo(() => {
           <ul className="flex flex-wrap justify-center items-stretch w-full max-w-5xl">
             {aboutItems.map(({ label, text, Icon }, idx) => (
               <li
-                key={idx}
                 className="w-1/2 sm:w-1/3 lg:w-1/6 px-2 mb-4 flex flex-col items-center text-center"
+                key={idx}
               >
                 {Icon && <Icon className="h-8 w-8 text-white mb-1" />}
                 <span className="text-sm font-bold text-white">{label}:</span>
