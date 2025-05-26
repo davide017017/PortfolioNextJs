@@ -73,7 +73,7 @@ export const heroData: Hero = {
 
   actions: [
     {
-      href: '/Cv-Davide Martinico.pdf',
+      href: '/cv-dark.pdf',
       text: 'Visualizza CV',
       primary: true,
       Icon: ArrowDownTrayIcon,
