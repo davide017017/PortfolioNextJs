@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { ArrowTopRightOnSquareIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
 import classNames from 'classnames';
 import Image from 'next/image';
 import { FC, memo } from 'react';
@@ -29,22 +29,49 @@ const Hero: FC = memo(() => {
             </h1>
             {description}
             <Socials />
-            <div className="flex justify-center w-full gap-3">
-              {actions.map(({ href, text, primary, Icon }) => (
-                <a
-                  className={classNames(
-                    'flex items-center justify-center gap-2 rounded-full border-2 px-4 py-2 text-sm font-medium text-off-white-200 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 sm:text-base',
-                    primary
-                      ? 'border-forest-green-200 ring-forest-green-200 hover:bg-sage-green-200/80'
-                      : 'border-off-white-200 ring-off-white-200 hover:bg-forest-night-200/80',
-                  )}
-                  href={href}
-                  key={text}
-                >
-                  {text}
-                  {Icon && <Icon className="h-5 w-5 sm:h-6 sm:w-6" />}
-                </a>
-              ))}
+
+            <div className="flex justify-center w-full flex-wrap gap-3">
+              {actions.map(({ href, text, primary, Icon }) => {
+                const isExternal = !href.startsWith('#');
+
+                return (
+                  <a
+                    className={classNames(
+                      'group relative flex items-center gap-2 rounded-full border px-5 py-2 text-sm font-semibold sm:text-base transition-all duration-300',
+                      'focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
+                      primary
+                        ? 'border-forest-green-200 text-forest-green-100 hover:bg-forest-green-200/20 focus-visible:ring-forest-green-200'
+                        : 'border-off-white-200 text-off-white-200 hover:bg-off-white-200/20 focus-visible:ring-off-white-200',
+                    )}
+                    href={href}
+                    key={text}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
+                    target={isExternal ? '_blank' : undefined}
+                  >
+                    <span className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:text-white">
+                      {text}
+                    </span>
+
+                    {Icon && (
+                      <Icon className="h-5 w-5 sm:h-6 sm:w-6 transition-transform duration-300 group-hover:scale-110 group-hover:text-white" />
+                    )}
+
+                    {isExternal && (
+                      <ArrowTopRightOnSquareIcon className="h-4 w-4 sm:h-5 sm:w-5 text-off-white-300 group-hover:text-white transition duration-300" />
+                    )}
+
+                    {/* LED-style ring */}
+                    <span
+                      className={classNames(
+                        'pointer-events-none absolute -inset-px rounded-full transition duration-300 opacity-0 group-hover:opacity-100',
+                        primary
+                          ? 'group-hover:ring-2 group-hover:ring-forest-green-200'
+                          : 'group-hover:ring-2 group-hover:ring-off-white-200',
+                      )}
+                    />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>

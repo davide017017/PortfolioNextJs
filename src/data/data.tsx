@@ -74,14 +74,26 @@ export const heroData: Hero = {
   actions: [
     {
       href: '/cv-dark.pdf',
-      text: 'Visualizza CV',
+      text: 'CV Modalità Scura',
+      primary: true,
+      Icon: ArrowDownTrayIcon,
+    },
+    {
+      href: '/cv-light.pdf',
+      text: 'CV Modalità Chiara',
       primary: true,
       Icon: ArrowDownTrayIcon,
     },
     {
       href: `#${SectionId.Contact}`,
-      text: 'Contattami ',
+      text: 'Scrivimi',
       primary: false,
+    },
+    {
+      href: 'https://github.com/davide017017',
+      text: 'GitHub',
+      primary: false,
+      Icon: CodeBracketSquareIcon,
     },
   ],
 };
