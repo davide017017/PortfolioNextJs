@@ -198,5 +198,9 @@ export const contactData = {
  */
 export const socialLinks: Social[] = [
   { label: 'GitHub', href: 'https://github.com/davide017017', icon: faGithub },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com', icon: faLinkedin },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/davide-martinico-017x017/',
+    icon: faLinkedin,
+  },
 ];
