@@ -28,7 +28,7 @@ Informatica, Giardinaggio, Manga, Viaggi, Musica (Batteria), Cucina
 ## Contatti
 
 - Email: davide017@hotmail.it
-- LinkedIn: [Il tuo profilo LinkedIn](https://www.linkedin.com/in/iltuoprofilo)
+- LinkedIn: [Il tuo profilo LinkedIn](https://www.linkedin.com/in/davide-martinico-017x017/)
 - GitHub: [github.com/davide017017](https://github.com/davide017017)
 
 ## Città
