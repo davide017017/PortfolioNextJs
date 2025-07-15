@@ -37,6 +37,7 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
+  Certifications: 'certifications',
   Portfolio: 'portfolio',
   Skills: 'skills',
   SoftSkills: 'softskills',
@@ -203,4 +204,20 @@ export const socialLinks: Social[] = [
     href: 'https://www.linkedin.com/in/davide-martinico-017x017/',
     icon: faLinkedin,
   },
+];
+
+/**
+ * Certifications data
+ * This is a separate data structure for certifications, which can be used in a dedicated section.
+ */
+export const certificationsData = [
+  {
+    title: 'HTML & CSS Certified',
+    issuer: 'Certiport',
+    date: 'Luglio 2025',
+    badgeUrl: '/assets/certifications/it-specialist-html-and-css(300x300).png',
+    verifyUrl: 'https://www.credly.com/badges/4c527832-86a7-4af1-b7e7-39d231effd3e/public_url',
+    tooltip: 'Certificazione ufficiale HTML & CSS',
+  },
+  // Altri badge…
 ];
