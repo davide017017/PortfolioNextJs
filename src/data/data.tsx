@@ -14,11 +14,11 @@ import React from 'react'; // Import di React
 
 // Import di immagini (raggruppate)
 import heroImage from '../images/header-background.webp';
-import MorraCineseView from '../images/portfolio/Morra-Cinese-View.jpg';
-import perdiana from '../images/portfolio/PerdianaReview.jpg';
-import Synapsyscreen from '../images/portfolio/SYNAPSIlogo.png';
-import todoAppImage from '../images/portfolio/ToDo-App.jpg';
-import profilepic from '../images/profilepic.jpg';
+import MorraCineseView from '../images/portfolio/Morra-Cinese-View.webp';
+import perdiana from '../images/portfolio/PerdianaReview.webp';
+import Synapsyscreen from '../images/portfolio/SYNAPSIlogo.webp';
+import todoAppImage from '../images/portfolio/ToDo-App.webp';
+import profilepic from '../images/profilepic.webp';
 import { About, Hero, HomepageMeta, PortfolioItem, Social } from './types';
 
 /**
@@ -215,7 +215,7 @@ export const certificationsData = [
     title: 'HTML & CSS Certified',
     issuer: 'Certiport',
     date: 'Luglio 2025',
-    badgeUrl: '/assets/certifications/it-specialist-html-and-css(300x300).png',
+    badgeUrl: '/assets/certifications/it-specialist-html-and-css(300x300).webp',
     verifyUrl: 'https://www.credly.com/badges/4c527832-86a7-4af1-b7e7-39d231effd3e/public_url',
     tooltip: 'Certificazione ufficiale HTML & CSS',
   },
