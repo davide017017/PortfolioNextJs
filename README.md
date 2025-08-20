@@ -2,7 +2,7 @@
 
 # Davide Martinico — Portfolio
 
-[![Anteprima del sito](./assets/ogImage.webp)](https://davide-martinico-portfolio.netlify.app/)
+[![Anteprima del sito](./public/ogImage.webp)](https://davide-martinico-portfolio.netlify.app/)
 
 > Sviluppatore web full-stack appassionato: costruisco applicazioni moderne, veloci e mantenibili.
 > Dai un’occhiata ai progetti e scopri come posso contribuire al tuo team.
