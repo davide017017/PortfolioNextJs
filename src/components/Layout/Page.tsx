@@ -16,7 +16,7 @@ const Page: FC<PageProps> = memo(({ children, title, description }) => (
       {/* Open Graph / SEO */}
       <meta content={title} property="og:title" />
       <meta content={description} property="og:description" />
-      <meta content="/ogImage.JPG" property="og:image" />
+      <meta content="/ogImage.webp" property="og:image" />
       <meta
         content="https://yourwebsite.com"
         property="og:https://davide-martinico-portfolio.netlify.app/"
