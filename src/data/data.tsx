@@ -1,4 +1,6 @@
-// Import di icone da librerie esterne (raggruppate e ordinate alfabeticamente)
+// ==============================
+// Imports — Icone librerie esterne (ordinati)
+// ==============================
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {
   AcademicCapIcon,
@@ -10,29 +12,43 @@ import {
   MapPinIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
-import React from 'react'; // Import di React
+import React from 'react';
 
-// Import di immagini (raggruppate)
-import heroImage from '../images/header-background.webp';
-import MorraCineseView from '../images/portfolio/Morra-Cinese-View.webp';
-import perdiana from '../images/portfolio/PerdianaReview.webp';
-import Synapsyscreen from '../images/portfolio/SYNAPSIlogo.webp';
-import todoAppImage from '../images/portfolio/ToDo-App.webp';
-import profilepic from '../images/profilepic.webp';
-import { About, Hero, HomepageMeta, PortfolioItem, Social } from './types';
+// ==============================
+// Imports — Tipi
+// ==============================
+import type {
+  About,
+  Certification,
+  CertificationBadge,
+  Hero,
+  HomepageMeta,
+  PortfolioItem,
+  Social,
+} from '@/data/types';
+// ==============================
+// Imports — Immagini locali (raggruppate)
+// (questi file devono essere in: src/images/...)
+// ==============================
+import heroImage from '@/images/header-background.webp';
+import MorraCineseView from '@/images/portfolio/Morra-Cinese-View.webp';
+import perdiana from '@/images/portfolio/PerdianaReview.webp';
+import Synapsyscreen from '@/images/portfolio/SYNAPSIlogo.webp';
+import todoAppImage from '@/images/portfolio/ToDo-App.webp';
+import profilepic from '@/images/profilepic.webp';
 
-/**
- * Page meta data
- */
+// ==============================
+// Page meta data
+// ==============================
 export const homePageMeta: HomepageMeta = {
   title: 'Davide Martinico | Aspirante Sviluppatore Full-Stack',
   description:
-    'Portfolio di Davide Martinico, studente di sviluppo full-stack. Esploro le tecnologie web più moderne, tra cui React, Next.js, TypeScript, Tailwind CSS, MySQl e PHP per creare applicazioni innovative.',
+    'Portfolio di Davide Martinico, studente di sviluppo full-stack. Esploro le tecnologie web più moderne, tra cui React, Next.js, TypeScript, Tailwind CSS, MySQL e PHP per creare applicazioni innovative.',
 };
 
-/**
- * Section definition
- */
+// ==============================
+// Section definition
+// ==============================
 export const SectionId = {
   Hero: 'hero',
   About: 'about',
@@ -45,9 +61,9 @@ export const SectionId = {
 
 export type SectionId = (typeof SectionId)[keyof typeof SectionId];
 
-/**
- * Hero section
- */
+// ==============================
+// Hero section
+// ==============================
 export const heroData: Hero = {
   imageSrc: heroImage,
   name: `Davide Martinico`,
@@ -71,25 +87,10 @@ export const heroData: Hero = {
       </div>
     </>
   ),
-
   actions: [
-    {
-      href: '/cv-dark.pdf',
-      text: 'CV Modalità Scura',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
-    {
-      href: '/cv-light.pdf',
-      text: 'CV Modalità Chiara',
-      primary: true,
-      Icon: ArrowDownTrayIcon,
-    },
-    {
-      href: `#${SectionId.Contact}`,
-      text: 'Scrivimi',
-      primary: false,
-    },
+    { href: '/cv-dark.pdf', text: 'CV Modalità Scura', primary: true, Icon: ArrowDownTrayIcon },
+    { href: '/cv-light.pdf', text: 'CV Modalità Chiara', primary: true, Icon: ArrowDownTrayIcon },
+    { href: `#${SectionId.Contact}`, text: 'Scrivimi', primary: false },
     {
       href: 'https://github.com/davide017017',
       text: 'GitHub',
@@ -99,12 +100,17 @@ export const heroData: Hero = {
   ],
 };
 
-/**
- * About section
- */
+// ==============================
+// About section
+// ==============================
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Junior Full-Stack Developer con background nel settore retail e una forte passione per lo sviluppo web. Dopo aver consolidato le competenze frontend, mi sto specializzando nel backend con PHP e Laravel. Lavoro con tecnologie moderne come React, Next.js, Tailwind CSS e MySQL, con particolare attenzione alla qualità del codice e alla user experience. Attualmente approfondisco Laravel avanzato, API REST e CI/CD con Docker, con l'obiettivo di crescere come sviluppatore completo e affidabile.`,
+  description: `Junior Full-Stack Developer con background nel settore retail e una forte passione per lo sviluppo web. 
+     Dopo aver consolidato le competenze frontend, mi sto specializzando nel backend con PHP e Laravel. 
+     Lavoro con tecnologie moderne come React, Next.js, Tailwind CSS e MySQL, con particolare attenzione 
+     alla qualità del codice e alla user experience. 
+     Attualmente approfondisco Laravel avanzato, API REST e CI/CD con Docker, con l'obiettivo di crescere 
+     come sviluppatore completo e affidabile.`,
   aboutItems: [
     {
       label: 'Formazione',
@@ -127,25 +133,23 @@ export const aboutData: About = {
   ],
 };
 
-/**
- * Portfolio section
- */
+// ==============================
+// Portfolio section
+// ==============================
 export const portfolioItems: PortfolioItem[] = [
   {
     title: (
-      <>
-        <div className="flex flex-col">
-          <h1>Perdiana Accomodation</h1>
-          <span className="text-sm font-light"> (B&B-Site)</span>
-        </div>
-      </>
+      <div className="flex flex-col">
+        <h1>Perdiana Accomodation</h1>
+        <span className="text-sm font-light">(B&amp;B-Site)</span>
+      </div>
     ),
     description: 'Piccolo sito in Html Css e Javascript',
     url: 'https://davide017017.github.io/PerdianaSite/',
     image: perdiana,
   },
   {
-    title: 'ToDo-App ',
+    title: 'ToDo-App',
     description:
       'Una applicazione per la gestione di liste di attività (To-Do List) con React e salvataggio in localStorage.',
     url: 'https://todo-app-davide-martinco.netlify.app/',
@@ -167,9 +171,9 @@ export const portfolioItems: PortfolioItem[] = [
   },
 ];
 
-/**
- * Contact section
- */
+// ==============================
+// Contact section
+// ==============================
 export const contactData = {
   headerText: 'Contatti',
   items: [
@@ -187,16 +191,16 @@ export const contactData = {
     },
     {
       text: 'Genova, Italia',
-      href: 'https://www.google.ca/maps/place/Genova+GE/@44.4460902,8.9567474,12z/data=!4m6!3m5!1s0x12d34152dcd49aad:0x236a84f11881620a!8m2!3d44.4071448!4d8.9347381!16zL20vMGhrbmY?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D',
+      href: 'https://www.google.ca/maps/place/Genova+GE/@44.4460902,8.9567474,12z/data=!4m6!3m5!1s0x12d34152dcd49aad:0x236a84f11881620a!8m2!3d44.4071448!4d8.9347381!16zL20vMGhrbmY?entry=ttu',
       Icon: MapPinIcon,
       srLabel: 'Posizione',
     },
   ],
 };
 
-/**
- * Social items
- */
+// ==============================
+// Social items
+// ==============================
 export const socialLinks: Social[] = [
   { label: 'GitHub', href: 'https://github.com/davide017017', icon: faGithub },
   {
@@ -206,18 +210,60 @@ export const socialLinks: Social[] = [
   },
 ];
 
-/**
- * Certifications data
- * This is a separate data structure for certifications, which can be used in a dedicated section.
- */
-export const certificationsData = [
+// ==============================
+// Certifications — featured badge (in evidenza)
+// ==============================
+export const featuredCertification: CertificationBadge = {
+  title: 'HTML & CSS Certified',
+  issuer: 'Certiport',
+  date: 'Luglio 2025',
+  badgeUrl: '/assets/certifications/it-specialist-html-and-css(300x300).webp',
+  verifyUrl: 'https://www.credly.com/badges/4c527832-86a7-4f35-aab8-b64d7839c357/public_url',
+  tooltip: 'Certificazione ufficiale HTML & CSS',
+};
+
+// ==============================
+// Certifications — altri attestati (PDF, per carosello/modal)
+// (thumb/preview saranno ricavati in runtime da .pdf → -thumb.webp / -preview.webp)
+// ==============================
+export const certificationPdfs: Certification[] = [
   {
-    title: 'HTML & CSS Certified',
-    issuer: 'Certiport',
-    date: 'Luglio 2025',
-    badgeUrl: '/assets/certifications/it-specialist-html-and-css(300x300).webp',
-    verifyUrl: 'https://www.credly.com/badges/4c527832-86a7-4af1-b7e7-39d231effd3e/public_url',
-    tooltip: 'Certificazione ufficiale HTML & CSS',
+    title: 'Certificato Corso Front-End Web Developer',
+    issuer: 'Musa Formazione',
+    date: '2025-01-13',
+    pdfUrl: '/assets/certifications/musa-formazione/Certificato_Corso_Front-End_Web_Developer.pdf',
   },
-  // Altri badge…
+  {
+    title: 'Certificato: Introduzione a Git e GitHub',
+    issuer: 'Musa Formazione',
+    date: '2025-01-18',
+    pdfUrl: '/assets/certifications/musa-formazione/Certificato_Introduzione_a_Git_e_GtHub.pdf',
+  },
+  {
+    title: 'Certificato: Programmazione a oggetti',
+    issuer: 'Musa Formazione',
+    date: '2024-08-05',
+    pdfUrl:
+      '/assets/certifications/musa-formazione/Certificato_Programmazione_orientata_agli_oggetti.pdf',
+  },
+  {
+    title: 'Attestato corso base Sistema Operativo Microsoft Windows per PC',
+    issuer: 'Musa Formazione',
+    date: '2024-07-31',
+    pdfUrl:
+      '/assets/certifications/musa-formazione/Attestato corso base Sistema Operativo Microsoft Windows per PC.pdf',
+  },
+  {
+    title: 'Certificato: Il mondo del web',
+    issuer: 'Musa Formazione',
+    date: '2024-08-06',
+    pdfUrl: '/assets/certifications/musa-formazione/Certificato_Il_mondo_del_web.pdf',
+  },
+  {
+    title: "Attestato di partecipazione - Introduzione all'informatica",
+    issuer: 'Musa Formazione',
+    date: '2024-08-03',
+    pdfUrl:
+      "/assets/certifications/musa-formazione/Attestato_di_partecipazione_al_corso_introduzione_all'informatica.pdf",
+  },
 ];

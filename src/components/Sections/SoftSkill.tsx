@@ -77,12 +77,12 @@ const SoftSkills: FC = memo(() => {
               >
                 <div className="flex flex-col items-center text-sage-green-400">
                   {softSkill.icon} {/* Icona usata direttamente */}
-                  <span className="mt-2 text-xxs font-bold text-dark-olive-700 text-center break-words">
+                  <span className="mt-2 text-sm font-bold text-dark-olive-700 text-center break-words">
                     {softSkill.name}
                   </span>
                 </div>
                 <div className="mt-4 text-center text-dark-olive-700">
-                  <p className="break-words text-xxs">{softSkill.description}</p>
+                  <p className="break-words text-base py-2 px-1">{softSkill.description}</p>
                 </div>
               </div>
             ))}

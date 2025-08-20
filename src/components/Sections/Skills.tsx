@@ -112,7 +112,7 @@ const Skills: FC = memo(() => {
             >
               {skill.icon}
             </a>
-            <span className="mt-1 text-xxs font-medium text-dark-olive-700">{skill.name}</span>
+            <span className="mt-1 text-xs font-medium text-dark-olive-700">{skill.name}</span>
 
             {/* Tooltip */}
             <div className="absolute z-10 bottom-[-36px] left-1/2 -translate-x-1/2 px-2 py-1 text-xs text-white bg-gray-900 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">

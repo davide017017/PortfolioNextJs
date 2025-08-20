@@ -1,16 +1,22 @@
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { StaticImageData } from 'next/image';
-import { ForwardRefExoticComponent, JSX, RefAttributes, SVGProps } from 'react';
+// ==============================
+// Imports (solo tipi)
+// ==============================
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import type { StaticImageData } from 'next/image';
+import type { ForwardRefExoticComponent, JSX, RefAttributes, SVGProps } from 'react';
 
+// ==============================
+// Meta
+// ==============================
 export interface HomepageMeta {
   title: string;
   description: string;
   ogImageUrl?: string;
 }
 
-/**
- * Hero section
- */
+// ==============================
+// Hero
+// ==============================
 export interface Hero {
   id?: string;
   imageSrc: StaticImageData;
@@ -26,9 +32,9 @@ interface HeroActionItem {
   Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
 }
 
-/**
- * About section
- */
+// ==============================
+// About
+// ==============================
 export interface About {
   id?: string;
   profileImageSrc?: string | StaticImageData;
@@ -42,9 +48,9 @@ export interface AboutItem {
   Icon?: ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, 'ref'>>;
 }
 
-/**
- * Skills section
- */
+// ==============================
+// Skills
+// ==============================
 export interface Skills {
   id?: string;
   name: string;
@@ -53,9 +59,9 @@ export interface Skills {
   url: string;
 }
 
-/**
- * Portfolio section
- */
+// ==============================
+// Portfolio
+// ==============================
 export interface PortfolioItem {
   id?: string;
   title: JSX.Element | string;
@@ -64,15 +70,16 @@ export interface PortfolioItem {
   image: string | StaticImageData;
 }
 
-/**
- * Contact section
- */
+// ==============================
+// Contact
+// ==============================
 export interface ContactItem {
   text: string;
   href?: string;
   Icon: IconComponent;
   srLabel: string;
 }
+
 export type IconComponent = ForwardRefExoticComponent<
   Omit<SVGProps<SVGSVGElement>, 'ref'> & {
     title?: string | undefined;
@@ -80,11 +87,35 @@ export type IconComponent = ForwardRefExoticComponent<
   } & RefAttributes<SVGSVGElement>
 >;
 
-/**
- * Social items (Social non è una sezione principale, quindi non ha bisogno di id)
- */
+// ==============================
+// Social
+// ==============================
 export interface Social {
   label: string;
   href: string;
   icon: IconDefinition;
 }
+
+// ==============================
+// Certifications
+// ==============================
+export interface CertificationBadge {
+  title: string;
+  issuer: string;
+  date?: string;
+  badgeUrl: string; // immagine del badge (es. Credly)
+  verifyUrl?: string; // link di verifica
+  tooltip?: string;
+}
+
+export type Certification = {
+  title: string;
+  issuer: string;
+  date?: string;
+  pdfUrl: string; // link pubblico al PDF in /public/...
+  verifyUrl?: string;
+
+  // RENDILI OPZIONALI (↓)
+  thumbUrl?: string; // miniatura (es. -thumb.webp) - se assente la ricaviamo dal nome del PDF
+  imageUrl?: string; // preview grande (es. -preview.webp) - idem
+};
