@@ -44,6 +44,7 @@ const formatDate = (input?: string) => {
 /* =============================
  * Fallback icon (se manca la thumb)
  * ============================= */
+
 const PdfIcon = memo(function PdfIcon() {
   return (
     <svg aria-hidden="true" height="40" viewBox="0 0 24 24" width="40">
