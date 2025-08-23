@@ -12,7 +12,8 @@
     "sitemap": "yarn next-sitemap",
     "prettier": "prettier --write .",
     "format": "eslint './src/**/*.{js,jsx,ts,tsx}' --fix && prettier --write .",
-    "tsc": "tsc --noEmit"
+    "tsc": "tsc --noEmit",
+    "assets:pdf-thumbs": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/pdf-build-thumbs.ps1 -Root public -PreviewWidth 1600 -ThumbWidth 300"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",

@@ -254,6 +254,12 @@ export const certificationPdfs: Certification[] = [
       '/assets/certifications/musa-formazione/Attestato corso base Sistema Operativo Microsoft Windows per PC.pdf',
   },
   {
+    title: 'Certificato: Teoria dei database',
+    issuer: 'Musa Formazione',
+    date: '2025-08-22',
+    pdfUrl: '/assets/certifications/musa-formazione/Certificato_Teoria_dei_database.pdf',
+  },
+  {
     title: 'Certificato: Il mondo del web',
     issuer: 'Musa Formazione',
     date: '2024-08-06',
