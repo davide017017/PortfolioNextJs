@@ -228,6 +228,12 @@ export const featuredCertification: CertificationBadge = {
 // ==============================
 export const certificationPdfs: Certification[] = [
   {
+    title: 'Certificato Corso Back-End Web Developer',
+    issuer: 'Musa Formazione',
+    date: '2025-08-27',
+    pdfUrl: '/assets/certifications/musa-formazione/Certificato_Corso_Back-End_Web_Developer.pdf',
+  },
+  {
     title: 'Certificato Corso Front-End Web Developer',
     issuer: 'Musa Formazione',
     date: '2025-01-13',
