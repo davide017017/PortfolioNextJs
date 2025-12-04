@@ -41,9 +41,10 @@ import profilepic from '@/images/profilepic.webp';
 // Page meta data
 // ==============================
 export const homePageMeta: HomepageMeta = {
-  title: 'Davide Martinico | Aspirante Sviluppatore Full-Stack',
+  title: 'Davide Martinico | Sviluppatore Full-Stack',
+
   description:
-    'Portfolio di Davide Martinico, studente di sviluppo full-stack. Esploro le tecnologie web più moderne, tra cui React, Next.js, TypeScript, Tailwind CSS, MySQL e PHP per creare applicazioni innovative.',
+    'Portfolio di Davide Martinico, sviluppatore full-stack specializzato in PHP, MySQL, React e Next.js. Attualmente collaboro allo sviluppo di HopySuite, piattaforma SaaS per il property management, lavorando su integrazioni API, automazioni, cron e interfacce moderne.',
 };
 
 // ==============================
@@ -105,12 +106,20 @@ export const heroData: Hero = {
 // ==============================
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Junior Full-Stack Developer con background nel settore retail e una forte passione per lo sviluppo web. 
-     Dopo aver consolidato le competenze frontend, mi sto specializzando nel backend con PHP e Laravel. 
-     Lavoro con tecnologie moderne come React, Next.js, Tailwind CSS e MySQL, con particolare attenzione 
-     alla qualità del codice e alla user experience. 
-     Attualmente approfondisco Laravel avanzato, API REST e CI/CD con Docker, con l'obiettivo di crescere 
-     come sviluppatore completo e affidabile.`,
+  description: `Junior Full-Stack Developer con esperienza pratica nello sviluppo di applicazioni web
+      e sistemi SaaS. Attualmente collaboro allo sviluppo di HopySuite, una piattaforma di property
+      management dove mi occupo di integrazioni API, processi automatizzati (cron), gestione dati,
+      ottimizzazione SQL e sviluppo front-end con React e Next.js.
+
+      Ho solide basi in PHP, MySQL, JavaScript, TypeScript, Tailwind CSS e nella realizzazione di
+      interfacce pulite e funzionali. Mi appassionano l’architettura delle API, i flussi di
+      sincronizzazione, la risoluzione di problemi complessi e la scrittura di codice chiaro e
+      mantenibile.
+
+      Attualmente approfondisco concetti avanzati di JavaScript, gestione dello stato, sicurezza
+      applicativa e flussi CI/CD, con l’obiettivo di crescere come sviluppatore affidabile sia
+      lato front-end che back-end.`,
+
   aboutItems: [
     {
       label: 'Formazione',
