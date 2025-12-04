@@ -12,7 +12,7 @@ import Image from 'next/image';
 import React, { memo, useCallback, useEffect, useRef, useState } from 'react';
 
 import Section from '@/components/Layout/Section';
-import { certificationPdfs, featuredCertification, SectionId } from '@/data/data';
+import { certificationPdfs, featuredCertifications, SectionId } from '@/data/data';
 
 /* =============================
  * Configurazione rapida (UI)
@@ -40,24 +40,6 @@ const formatDate = (input?: string) => {
     year: 'numeric',
   }).format(d);
 };
-
-/* =============================
- * Fallback icon (se manca la thumb)
- * ============================= */
-
-const PdfIcon = memo(function PdfIcon() {
-  return (
-    <svg aria-hidden="true" height="40" viewBox="0 0 24 24" width="40">
-      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="#fff" />
-      <path d="M14 2v6h6" fill="#eee" />
-      <rect fill="#e11d48" height="8" rx="1" width="14" x="5" y="11" />
-      <text fill="#fff" fontSize="7" fontWeight="700" textAnchor="middle" x="12" y="17">
-        PDF
-      </text>
-      <path d="M14 2v6h6" fill="none" stroke="#bbb" />
-    </svg>
-  );
-});
 
 /* =============================
  * Tipi helper (niente any)
@@ -185,46 +167,61 @@ function CertificationsBase() {
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-2 sm:px-4 md:grid-cols-2">
           {/* Colonna SINISTRA — featured (sticky) */}
           <aside className="md:sticky md:top-4 md:self-start">
-            <div className="flex flex-col items-center rounded-xl bg-off-white-700/70 p-5 shadow">
-              <a
-                aria-label={`Verifica ${featuredCertification.title}`}
-                className="group"
-                href={featuredCertification.verifyUrl}
-                rel="noreferrer"
-                target="_blank"
-                title={featuredCertification.tooltip ?? featuredCertification.title}
+            {featuredCertifications.map((cert, idx) => (
+              <div
+                className={`flex flex-col items-center rounded-xl bg-off-white-700/70 p-5 shadow ${
+                  idx > 0 ? 'mt-6' : ''
+                }`}
+                key={cert.title}
               >
-                <Image
-                  alt={featuredCertification.title}
-                  className="rounded-xl shadow-2xl transition-transform group-hover:scale-105"
-                  height={BADGE_SIZE}
-                  priority
-                  src={featuredCertification.badgeUrl}
-                  width={BADGE_SIZE}
-                />
-              </a>
-
-              <div className="mt-3 text-center">
-                <p className="text-base font-semibold text-dark-olive-700">
-                  {featuredCertification.title}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {featuredCertification.issuer}
-                  {featuredCertification.date ? ` • ${featuredCertification.date}` : ''}
-                </p>
-
-                {featuredCertification.verifyUrl && (
+                {cert.verifyUrl ? (
                   <a
-                    className="mt-3 inline-block rounded border px-2 py-1 text-xs hover:bg-gray-50"
-                    href={featuredCertification.verifyUrl}
+                    aria-label={`Verifica ${cert.title}`}
+                    className="group"
+                    href={cert.verifyUrl}
                     rel="noreferrer"
                     target="_blank"
+                    title={cert.tooltip ?? cert.title}
                   >
-                    Verifica su Credly
+                    <Image
+                      alt={cert.title}
+                      className="rounded-xl shadow-2xl transition-transform group-hover:scale-105"
+                      height={BADGE_SIZE}
+                      priority={idx === 0}
+                      src={cert.badgeUrl}
+                      width={BADGE_SIZE}
+                    />
                   </a>
+                ) : (
+                  <Image
+                    alt={cert.title}
+                    className="rounded-xl shadow-2xl"
+                    height={BADGE_SIZE}
+                    src={cert.badgeUrl}
+                    width={BADGE_SIZE}
+                  />
                 )}
+
+                <div className="mt-3 text-center">
+                  <p className="text-base font-semibold text-dark-olive-700">{cert.title}</p>
+                  <p className="text-xs text-gray-500">
+                    {cert.issuer}
+                    {cert.date ? ` • ${cert.date}` : ''}
+                  </p>
+
+                  {cert.verifyUrl && (
+                    <a
+                      className="mt-3 inline-block rounded border px-2 py-1 text-xs hover:bg-gray-50"
+                      href={cert.verifyUrl}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Verifica su Credly
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
+            ))}
           </aside>
 
           {/* Colonna DESTRA — carosello verticale + puntini */}

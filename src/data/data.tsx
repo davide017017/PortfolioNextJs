@@ -233,9 +233,22 @@ export const featuredCertification: CertificationBadge = {
   issuer: 'Certiport',
   date: 'Luglio 2025',
   badgeUrl: '/assets/certifications/it-specialist-html-and-css(300x300).webp',
-  verifyUrl: 'https://www.credly.com/badges/4c527832-86a7-4f35-aab8-b64d7839c357/public_url',
+  verifyUrl: 'https://www.credly.com/badges/4c527832-86a7-4af1-b7e7-39d231effd3e/public_url',
   tooltip: 'Certificazione ufficiale HTML & CSS',
 };
+
+// Più badge in evidenza (HTML+CSS + JavaScript)
+export const featuredCertifications: CertificationBadge[] = [
+  featuredCertification,
+  {
+    title: 'IT Specialist - JavaScript',
+    issuer: 'Certiport',
+    date: 'Novembre 2025',
+    badgeUrl: '/assets/certifications/it-specialist-javascript(300x300).webp',
+    verifyUrl: 'https://www.credly.com/badges/4be4a445-43f5-4f05-b55f-23fc5b88540c/public_url',
+    tooltip: 'Certificazione ufficiale JavaScript',
+  },
+];
 
 // ==============================
 // Certifications — altri attestati (PDF, per carosello/modal)
