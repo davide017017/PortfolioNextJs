@@ -38,7 +38,7 @@ interface HeroActionItem {
 export interface About {
   id?: string;
   profileImageSrc?: string | StaticImageData;
-  description: string;
+  description: React.ReactNode;
   aboutItems: AboutItem[];
 }
 

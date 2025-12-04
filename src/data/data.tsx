@@ -71,19 +71,18 @@ export const heroData: Hero = {
   description: (
     <>
       <div className="mx-auto max-w-prose">
-        <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg">
-          Sviluppatore full-stack junior con esperienza in <strong>Laravel</strong>,{' '}
-          <strong>PHP</strong>, <strong>MySQL</strong> e <strong>Tailwind CSS</strong>, affiancata
-          da solide basi in <strong>React</strong>, <strong>Next.js</strong> e{' '}
-          <strong>TypeScript</strong>.
+        <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg prose-strong:text-golden-brown-100">
+          Sviluppatore full-stack con esperienza in <strong>PHP</strong>, <strong>MySQL</strong> e{' '}
+          <strong>React</strong>. In <strong>HopySuite</strong> lavoro su API, cron e interfacce
+          moderne.
         </p>
-        <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg mt-4">
-          Approccio pratico e orientato alla soluzione, con particolare attenzione alla scrittura di
-          codice chiaro e manutenibile.
+
+        <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg mt-4 prose-strong:text-golden-brown-100">
+          Amo le soluzioni semplici, il codice chiaro e imparare ogni giorno qualcosa di nuovo.
         </p>
-        <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg mt-4">
-          Background in gestione e coordinamento, utile per collaborare in team e contribuire al
-          raggiungimento di obiettivi concreti.
+
+        <p className="prose-sm text-off-white-200 sm:prose-base lg:prose-lg mt-4 prose-strong:text-golden-brown-100">
+          Curioso, collaborativo e sempre pronto a migliorare.
         </p>
       </div>
     </>
@@ -106,19 +105,26 @@ export const heroData: Hero = {
 // ==============================
 export const aboutData: About = {
   profileImageSrc: profilepic,
-  description: `Junior Full-Stack Developer con esperienza pratica nello sviluppo di applicazioni web
-      e sistemi SaaS. Attualmente collaboro allo sviluppo di HopySuite, una piattaforma di property
+  description: (
+    <>
+      Junior Full-Stack Developer con esperienza pratica nello sviluppo di applicazioni web e
+      sistemi SaaS.
+      <br />
+      Attualmente collaboro allo sviluppo di <strong>HopySuite</strong>, una piattaforma di property
       management dove mi occupo di integrazioni API, processi automatizzati (cron), gestione dati,
       ottimizzazione SQL e sviluppo front-end con React e Next.js.
-
-      Ho solide basi in PHP, MySQL, JavaScript, TypeScript, Tailwind CSS e nella realizzazione di
-      interfacce pulite e funzionali. Mi appassionano l’architettura delle API, i flussi di
-      sincronizzazione, la risoluzione di problemi complessi e la scrittura di codice chiaro e
-      mantenibile.
-
-      Attualmente approfondisco concetti avanzati di JavaScript, gestione dello stato, sicurezza
-      applicativa e flussi CI/CD, con l’obiettivo di crescere come sviluppatore affidabile sia
-      lato front-end che back-end.`,
+      <br />
+      <br />
+      Ho solide basi in <strong>PHP</strong>, <strong>MySQL</strong>, <strong>JavaScript</strong>,
+      <strong>TypeScript</strong> e <strong>Tailwind CSS</strong>, con attenzione alla creazione di
+      interfacce pulite e funzionali.
+      <br />
+      <br />
+      Sono appassionato di architettura delle API, flussi di sincronizzazione, debug e scrittura di
+      codice chiaro e mantenibile. Sto approfondendo concetti avanzati di JavaScript, sicurezza
+      applicativa e CI/CD, con l’obiettivo di crescere come sviluppatore completo e affidabile.
+    </>
+  ),
 
   aboutItems: [
     {

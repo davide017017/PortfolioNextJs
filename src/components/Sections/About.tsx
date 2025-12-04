@@ -32,7 +32,9 @@ const About: FC = memo(() => {
         >
           <div className="flex flex-col gap-y-2">
             <h2 className="text-2xl font-bold font-serif text-white">About me</h2>
-            <p className="prose prose-xs text-off-white-200 sm:prose-base">{description}</p>
+            <p className="prose prose-xs text-off-white-200 sm:prose-base  prose-strong:text-golden-brown-100">
+              {description}
+            </p>
           </div>
         </div>
 
