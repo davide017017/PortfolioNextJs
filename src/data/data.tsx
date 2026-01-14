@@ -181,7 +181,8 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'Synapsi',
     description:
       "Synapsi Finance è un'applicazione Laravel modulare progettata per semplificare la gestione finanziaria personale e professionale",
-    url: 'https://synapsy-frontend.vercel.app/',
+    // url: 'https://synapsy-frontend.vercel.app/',
+    url: ' ',
     image: Synapsyscreen,
   },
 ];
