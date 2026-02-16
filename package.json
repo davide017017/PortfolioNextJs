@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "cross-env TURBOPACK=0 next dev",
+    "dev": "next dev --webpack",
     "build": "yarn compile && cross-env TURBOPACK=0 next build",
     "start": "next start",
     "clean": "rm -rf build-tsc .next",

@@ -12,6 +12,7 @@ import {
   MapPinIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
+import { title } from 'process';
 import React from 'react';
 
 // ==============================
@@ -32,6 +33,7 @@ import type {
 // ==============================
 import heroImage from '@/images/header-background.webp';
 import MorraCineseView from '@/images/portfolio/Morra-Cinese-View.webp';
+import octomindImage from '@/images/portfolio/octomind.webp';
 import perdiana from '@/images/portfolio/PerdianaReview.webp';
 import Synapsyscreen from '@/images/portfolio/SYNAPSIlogo.webp';
 import todoAppImage from '@/images/portfolio/ToDo-App.webp';
@@ -183,6 +185,13 @@ export const portfolioItems: PortfolioItem[] = [
       "Synapsi Finance è un'applicazione Laravel modulare progettata per semplificare la gestione finanziaria personale e professionale",
     url: 'https://synapsy-dev.vercel.app/',
     image: Synapsyscreen,
+  },
+  {
+    title: 'OctoMind',
+    description:
+      'Mini-app full-stack che consuma le GitHub Public API per esplorare utenti e repository. Backend in FastAPI, frontend in JavaScript.',
+    url: 'https://octomind.netlify.app/', // oppure tuo dominio
+    image: octomindImage,
   },
 ];
 
