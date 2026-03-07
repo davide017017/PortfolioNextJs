@@ -12,7 +12,6 @@ import {
   MapPinIcon,
   SparklesIcon,
 } from '@heroicons/react/24/outline';
-import { title } from 'process';
 import React from 'react';
 
 // ==============================
@@ -37,6 +36,7 @@ import octomindImage from '@/images/portfolio/octomind.webp';
 import perdiana from '@/images/portfolio/PerdianaReview.webp';
 import Synapsyscreen from '@/images/portfolio/SYNAPSIlogo.webp';
 import todoAppImage from '@/images/portfolio/ToDo-App.webp';
+import vistodaImage from '@/images/portfolio/vistoda.webp';
 import profilepic from '@/images/profilepic.webp';
 
 // ==============================
@@ -190,8 +190,15 @@ export const portfolioItems: PortfolioItem[] = [
     title: 'OctoMind',
     description:
       'Mini-app full-stack che consuma le GitHub Public API per esplorare utenti e repository. Backend in FastAPI, frontend in JavaScript.',
-    url: 'https://octomind.netlify.app/', // oppure tuo dominio
+    url: 'https://octomind.netlify.app/',
     image: octomindImage,
+  },
+  {
+    title: 'VistoDa',
+    description:
+      'App per tracciare film, serie TV, anime e stand-up visti o da vedere. Backend FastAPI + PostgreSQL, frontend vanilla JavaScript + Bootstrap con UI vintage ispirata al cinema.',
+    url: 'https://github.com/davide017017/VistoDa',
+    image: vistodaImage,
   },
 ];
 
