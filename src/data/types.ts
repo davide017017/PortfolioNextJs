@@ -106,6 +106,7 @@ export interface CertificationBadge {
   badgeUrl: string; // immagine del badge (es. Credly)
   verifyUrl?: string; // link di verifica
   tooltip?: string;
+  pdfUrl: string; // link pubblico al PDF in /public/...
 }
 
 export type Certification = {

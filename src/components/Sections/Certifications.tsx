@@ -174,33 +174,21 @@ function CertificationsBase() {
                 }`}
                 key={cert.title}
               >
-                {cert.verifyUrl ? (
-                  <a
-                    aria-label={`Verifica ${cert.title}`}
-                    className="group"
-                    href={cert.verifyUrl}
-                    rel="noreferrer"
-                    target="_blank"
-                    title={cert.tooltip ?? cert.title}
-                  >
-                    <Image
-                      alt={cert.title}
-                      className="rounded-xl shadow-2xl transition-transform group-hover:scale-105"
-                      height={BADGE_SIZE}
-                      priority={idx === 0}
-                      src={cert.badgeUrl}
-                      width={BADGE_SIZE}
-                    />
-                  </a>
-                ) : (
+                <div
+                  className="cursor-pointer"
+                  onClick={() => {
+                    const i = certificationPdfs.findIndex(p => p.pdfUrl === cert.pdfUrl);
+                    if (i !== -1) openAt(i);
+                  }}
+                >
                   <Image
                     alt={cert.title}
-                    className="rounded-xl shadow-2xl"
+                    className="rounded-xl shadow-2xl transition-transform hover:scale-105"
                     height={BADGE_SIZE}
                     src={cert.badgeUrl}
                     width={BADGE_SIZE}
                   />
-                )}
+                </div>
 
                 <div className="mt-3 text-center">
                   <p className="text-base font-semibold text-dark-olive-700">{cert.title}</p>
@@ -409,36 +397,11 @@ function CertificationsBase() {
                 className="w-full overflow-hidden rounded-lg bg-off-white-800"
                 style={{ height: LIST_H }}
               >
-                {USE_IMAGE_PREVIEW ? (
-                  (() => {
-                    const cert = certificationPdfs[index];
-                    const imageUrl = encodePath(cert.imageUrl ?? previewFromPdf(cert.pdfUrl));
-                    return (
-                      <div className="relative h-full w-full">
-                        <Image
-                          alt={cert.title}
-                          className="object-contain"
-                          fill
-                          priority
-                          sizes="100vw"
-                          src={imageUrl}
-                        />
-                      </div>
-                    );
-                  })()
-                ) : (
-                  <object
-                    className="h-full w-full"
-                    data={encodePath(certificationPdfs[index].pdfUrl)}
-                    type="application/pdf"
-                  >
-                    <iframe
-                      className="h-full w-full"
-                      src={encodePath(certificationPdfs[index].pdfUrl)}
-                      title={certificationPdfs[index].title}
-                    />
-                  </object>
-                )}
+                <iframe
+                  className="w-full h-full"
+                  src={encodePath(certificationPdfs[index].pdfUrl)}
+                  title={certificationPdfs[index].title}
+                />
               </div>
 
               {/* Navigazione modale */}

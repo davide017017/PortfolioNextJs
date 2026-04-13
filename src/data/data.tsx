@@ -244,25 +244,27 @@ export const socialLinks: Social[] = [
 // ==============================
 // Certifications — featured badge (in evidenza)
 // ==============================
-export const featuredCertification: CertificationBadge = {
-  title: 'HTML & CSS Certified',
-  issuer: 'Certiport',
-  date: 'Luglio 2025',
-  badgeUrl: '/assets/certifications/it-specialist-html-and-css(300x300).webp',
-  verifyUrl: 'https://www.credly.com/badges/4c527832-86a7-4af1-b7e7-39d231effd3e/public_url',
-  tooltip: 'Certificazione ufficiale HTML & CSS',
-};
-
-// Più badge in evidenza (HTML+CSS + JavaScript)
 export const featuredCertifications: CertificationBadge[] = [
-  featuredCertification,
   {
-    title: 'IT Specialist - JavaScript',
+    title: 'IT Specialist – HTML & CSS',
     issuer: 'Certiport',
-    date: 'Novembre 2025',
-    badgeUrl: '/assets/certifications/it-specialist-javascript(300x300).webp',
-    verifyUrl: 'https://www.credly.com/badges/4be4a445-43f5-4f05-b55f-23fc5b88540c/public_url',
-    tooltip: 'Certificazione ufficiale JavaScript',
+    date: '2025-01-01',
+    badgeUrl: '/assets/certifications/html-css-preview.webp',
+    pdfUrl: '/assets/certifications/html-css.pdf',
+  },
+  {
+    title: 'IT Specialist – JavaScript',
+    issuer: 'Certiport',
+    date: '2026-01-01',
+    badgeUrl: '/assets/certifications/javascript-preview.webp',
+    pdfUrl: '/assets/certifications/javascript.pdf',
+  },
+  {
+    title: 'PHP Developer Fundamentals',
+    issuer: 'Certiport',
+    date: '2026-01-01',
+    badgeUrl: '/assets/certifications/ic-php-preview.webp',
+    pdfUrl: '/assets/certifications/ic-php.pdf',
   },
 ];
 
